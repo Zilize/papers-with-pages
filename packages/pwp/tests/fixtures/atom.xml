@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <entry>
+    <id>http://arxiv.org/abs/2410.12345v2</id>
+    <title>A synthetic
+      research project</title>
+    <summary>Code: https://github.com/example/research-project. Results are available.</summary>
+    <published>2024-10-16T10:00:00Z</published>
+    <updated>2024-10-18T12:00:00Z</updated>
+    <author><name>Alex Example</name><arxiv:affiliation>Example Institute</arxiv:affiliation></author>
+    <category term="cs.CV"/><category term="cs.AI"/>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:comment>Project: https://example.github.io/research-project/</arxiv:comment>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9901001v1</id>
+    <title>A synthetic paper without links</title>
+    <summary>No external resources are mentioned.</summary>
+    <author><name>Sam Example</name></author>
+    <category term="hep-th"/>
+  </entry>
+</feed>
+

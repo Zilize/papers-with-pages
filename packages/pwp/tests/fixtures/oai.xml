@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+  <responseDate>2026-10-10T04:00:00Z</responseDate>
+  <ListRecords>
+    <record>
+      <header><identifier>oai:arXiv.org:2410.12345</identifier><datestamp>2026-10-09</datestamp><setSpec>cs:cs:CV</setSpec></header>
+      <metadata>
+        <arXiv xmlns="http://arxiv.org/OAI/arXiv/">
+          <id>2410.12345</id><created>2024-10-16</created><updated>2024-10-18</updated>
+          <authors><author><keyname>Example</keyname><forenames>Alex</forenames><affiliation>Example Institute</affiliation></author></authors>
+          <title>A synthetic research project</title><categories>cs.CV cs.AI</categories>
+          <abstract>No resource links are present in this metadata record.</abstract>
+          <comments>Workshop paper.</comments>
+        </arXiv>
+      </metadata>
+    </record>
+    <record>
+      <header status="deleted"><identifier>oai:arXiv.org:2410.22222</identifier><datestamp>2026-10-09</datestamp></header>
+    </record>
+    <record>
+      <header><identifier>oai:arXiv.org:2410.33333</identifier><datestamp>2026-10-09</datestamp></header>
+      <metadata><arXiv xmlns="http://arxiv.org/OAI/arXiv/"><id>2410.33333</id></arXiv></metadata>
+    </record>
+    <resumptionToken expirationDate="2026-10-11T00:00:00Z">next+token/=</resumptionToken>
+  </ListRecords>
+</OAI-PMH>
+

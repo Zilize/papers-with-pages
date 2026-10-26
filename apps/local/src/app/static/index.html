@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
+    <title>Papers with Pages</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/app.js" defer></script>
+    <script src="/static/carousel.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section aria-label="Paper gallery">
+        <header class="toolbar" aria-label="Collection tools">
+          <button id="gallery-filter-open" class="button filter-trigger" popovertarget="gallery-filters" aria-label="Gallery filters" title="Gallery filters">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="3" fill="currentColor" stroke="none"/></svg>
+            <span id="filter-badge">1</span>
+          </button>
+          <div class="toolbar-actions">
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              type="search"
+              id="search"
+              placeholder="Search papers…"
+              aria-label="Search papers"
+          /></label>
+          <div class="view-controls" role="group" aria-label="Gallery view">
+            <button data-view="grid" aria-pressed="true">Grid</button>
+            <button data-view="list" aria-pressed="false">List</button>
+          </div>
+          <button class="button primary" id="collect-open" aria-label="Collect papers">
+            <span aria-hidden="true">＋</span><span class="collect-label">Collect papers</span>
+            <span id="running-dot" hidden aria-hidden="true">●</span>
+          </button>
+          </div>
+        </header>
+        <span id="collection-count" class="sr-only" role="status">Loading collection…</span>
+        <div id="gallery" class="gallery" aria-label="Papers"></div>
+        <div id="gallery-pagination" class="gallery-pagination" hidden>
+          <button id="load-more" class="button" type="button">Load more papers</button>
+        </div>
+        <div id="empty" class="empty" hidden>
+          <div class="empty-art" aria-hidden="true"><span>↗</span></div>
+          <h2>Your next discovery starts here.</h2>
+          <p>
+            Choose a date range to collect papers and uncover their project
+            pages, code, and datasets.
+          </p>
+          <button class="button primary" id="empty-collect">
+            Collect your first papers <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div id="no-matches" class="empty compact" hidden>
+          <h2>No matching papers.</h2>
+          <p>Try another search or resource filter.</p><button class="button" id="reset-filters">Reset filters</button>
+        </div>
+        <p id="page-error" class="error" role="alert" hidden></p>
+      </section>
+    </main>
+
+    <section id="gallery-filters" popover aria-labelledby="gallery-filters-title">
+      <div class="dialog-header">
+        <h2 id="gallery-filters-title">Gallery filters</h2>
+        <button class="icon-button" popovertarget="gallery-filters" popovertargetaction="hide" aria-label="Close gallery filters">×</button>
+      </div>
+      <fieldset><legend>Resources</legend>
+          <div class="filters" role="group" aria-label="Filter resources">
+            <button
+              class="filter active"
+              data-kind="project_page"
+              aria-pressed="true"
+            >
+              Projects
+            </button>
+            <button class="filter" data-kind="all" aria-pressed="false">
+              All papers
+            </button>
+            <button class="filter" data-kind="repository" aria-pressed="false">
+              Code
+            </button>
+            <button class="filter" data-kind="dataset" aria-pressed="false">
+              Datasets
+            </button>
+            <button class="filter" data-kind="demo" aria-pressed="false">
+              Demos
+            </button>
+          </div>
+      </fieldset>
+      <fieldset><legend>Publication dates</legend>
+        <div class="date-fields">
+          <label>From<input id="filter-from" type="date" /></label>
+          <label>Through<input id="filter-through" type="date" /></label>
+        </div>
+        <p class="field-note">Inclusive first publication dates. Leave either end open.</p>
+        <p id="filter-error" class="error" role="alert" hidden></p>
+      </fieldset>
+      <label>arXiv category<select id="filter-category"><option value="">All categories</option></select></label>
+      <p class="field-note">Matches primary and secondary categories in your collection.</p>
+      <div class="filter-panel-footer">
+        <span id="filter-results" role="status"></span>
+        <button id="clear-gallery-filters" class="button">Clear filters</button>
+      </div>
+    </section>
+
+    <dialog id="collect-dialog" aria-labelledby="collect-title">
+      <div class="dialog-header">
+        <h2 id="collect-title">Collect papers</h2
+        ><button
+          class="icon-button"
+          data-close="collect-dialog"
+          aria-label="Close collection dialog"
+        >
+          ×
+        </button>
+      </div>
+      <p id="collect-description" class="dialog-description">
+        Choose a date range. We’ll gather metadata and find the resources behind
+        each paper.
+      </p>
+      <form id="collect-form">
+        <fieldset id="collect-fields">
+          <div class="date-fields">
+            <label>From<input type="date" id="start" required /></label
+            ><label>Through<input type="date" id="end" required /></label>
+          </div>
+          <p class="field-note">
+            Inclusive arXiv metadata update dates, not first publication dates.
+          </p>
+          <label
+            >Archive<select id="archive">
+              <option value="cs">Computer science</option>
+              <option value="">All archives</option>
+              <option value="math">Mathematics</option>
+              <option value="physics">Physics</option>
+              <option value="stat">Statistics</option>
+              <option value="eess">
+                Electrical engineering &amp; systems science
+              </option>
+              <option value="q-bio">Quantitative biology</option>
+              <option value="q-fin">Quantitative finance</option>
+              <option value="econ">Economics</option>
+            </select></label
+          >
+          <label class="check-label"
+            ><input type="checkbox" id="refresh" /> Reprocess papers already in
+            my collection</label
+          >
+        </fieldset>
+        <details id="collect-advanced">
+          <summary>GitHub token (required)</summary>
+          <p class="field-note">Read public repositories with your personal access token.
+            Saved in your system credential store and restored after restart.</p>
+          <label>GitHub token<input id="github-token" type="password"
+            autocomplete="off" spellcheck="false" maxlength="512" /></label>
+          <p id="github-status" class="field-note" role="status"></p>
+          <button id="github-save" type="button" class="button">Set token</button>
+          <button id="github-clear" type="button" class="button">Clear token</button>
+        </details>
+        <p id="run-range" class="field-note" hidden></p>
+        <section id="run-status" class="run-status" aria-live="polite" hidden>
+          <div class="status-heading">
+            <strong id="phase-label"></strong><span id="phase-count"></span>
+          </div>
+          <progress
+            id="progress"
+            max="1"
+            aria-label="Collection progress"
+          ></progress>
+          <p id="status-text"></p>
+          <p id="current-paper"></p>
+          <details id="worker-status" hidden>
+            <summary>Active tasks and timing</summary>
+            <ul id="worker-list"></ul>
+          </details>
+          <details id="failures" hidden>
+            <summary id="failures-title"></summary>
+            <ul id="failure-list"></ul>
+          </details>
+        </section>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <div class="dialog-actions">
+          <span id="close-note">Saved on this computer.</span
+          ><button class="button" id="stop-button" type="button" hidden>Stop collection</button>
+          <button class="button primary" id="start-button" type="submit">
+            Start collecting <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog
+      id="detail-dialog"
+      class="detail-dialog"
+      aria-labelledby="detail-title"
+    >
+      <div class="dialog-header">
+        <span class="eyebrow" id="detail-category"></span
+        ><button
+          class="icon-button"
+          data-close="detail-dialog"
+          aria-label="Close paper details"
+        >
+          ×
+        </button>
+      </div>
+      <p id="detail-error" class="error" role="alert" hidden></p>
+      <h2 id="detail-title"></h2>
+      <p id="detail-authors" class="authors"></p>
+      <div id="detail-resources" class="resource-links"></div>
+      <details id="detail-quality" hidden>
+        <summary id="detail-quality-title"></summary>
+        <ul id="detail-quality-items"></ul>
+      </details>
+      <h3>About this paper</h3>
+      <p id="detail-abstract" class="abstract"></p>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "papers-with-pages"
+version = "0.1.0a1"
+description = "Metadata-first tools for discovering research project resources."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "aiohttp>=3.12,<4",
+    "beautifulsoup4>=4.13,<5",
+    "bibtexparser>=1.4,<2",
+    "defusedxml>=0.7.1,<1",
+    "httpx>=0.28,<1",
+    "markdown-it-py>=3,<5",
+    "pillow>=11,<13",
+    "pydantic>=2.10,<3",
+]
+
+[project.optional-dependencies]
+render = ["playwright>=1.51,<2"]
+
+[project.scripts]
+pwp = "pwp.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pwp"]
+
