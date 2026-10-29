@@ -74,10 +74,18 @@ function carousel(item, open) {
       if (open) button.addEventListener("click", open);
       if (item.cover) {
         const img = localImage(item.thumbnail || item.cover, `Project page first viewport: ${item.paper.title}`);
+        if (item.thumbnail) {
+          // Let the browser pick the width closest to the card's device pixels.
+          img.srcset = `${item.thumbnail}?w=480 480w, ${item.thumbnail}?w=960 960w`;
+          img.sizes = "auto, (max-width: 600px) 100vw, (max-width: 1000px) 50vw, 480px";
+        }
         // Fall back to the full screenshot when a thumbnail cannot be produced.
         img.addEventListener("error", () => {
-          if (item.thumbnail && img.getAttribute("src") === item.thumbnail) img.src = item.cover;
-          else button.replaceChildren(placeholder(item.paper));
+          if (img.srcset) {
+            img.removeAttribute("srcset");
+            img.removeAttribute("sizes");
+            img.src = item.cover;
+          } else button.replaceChildren(placeholder(item.paper));
         });
         button.append(img);
       } else button.append(placeholder(item.paper));

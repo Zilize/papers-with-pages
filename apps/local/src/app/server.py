@@ -16,7 +16,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from app.credentials import TokenStore, TokenStoreError
 from app.jobs import Collector, HarvestRequest
-from app.storage import Store, write_thumbnail
+from app.storage import THUMBNAIL_WIDTHS, Store, write_thumbnail
 
 STATIC = Path(__file__).parent / "static"
 
@@ -203,17 +203,18 @@ def create_app(
         return await api.state.collector.close()
 
     @api.get("/thumbnails/{path:path}")
-    async def thumbnail(path: str):
+    async def thumbnail(path: str, w: int = THUMBNAIL_WIDTHS[0]):
         assets = store.root / "assets"
         source = (assets / path).resolve()
         if (
-            not source.is_relative_to(assets)
+            w not in THUMBNAIL_WIDTHS
+            or not source.is_relative_to(assets)
             or source.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}
             or not source.is_file()
         ):
             raise HTTPException(404, "Image not found")
         try:
-            target = await asyncio.to_thread(write_thumbnail, source)
+            target = await asyncio.to_thread(write_thumbnail, source, w)
         except (OSError, PwpError):
             raise HTTPException(404, "Thumbnail unavailable") from None
         # Sources are content-addressed, so a thumbnail never changes for its URL.

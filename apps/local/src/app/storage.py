@@ -22,7 +22,8 @@ _IO_LOCK = threading.RLock()
 GALLERY_INDEX_VERSION = 1
 # Results are immutable per run, so these files identify a paper's gallery entry.
 _SIGNATURE_FILES = ("metadata.json", "current.json", "latest.json")
-THUMBNAIL_WIDTH = 640
+# Gallery cards are at most ~480 CSS px wide; 960 covers 2x displays.
+THUMBNAIL_WIDTHS = (480, 960)
 
 
 def _file_operation(operation):
@@ -84,21 +85,27 @@ def _signature(folder: Path) -> dict:
     return signature
 
 
-def thumbnail_path(source: Path) -> Path:
-    return source.with_name(f"{source.stem}.thumb.webp")
+def thumbnail_path(source: Path, width: int) -> Path:
+    return source.with_name(f"{source.stem}.w{width}.webp")
 
 
-def write_thumbnail(source: Path) -> Path:
-    """Write a gallery-sized WebP beside a content-addressed image once."""
-    target = thumbnail_path(source)
+def write_thumbnail(source: Path, width: int = THUMBNAIL_WIDTHS[0]) -> Path:
+    """Write a WebP of one gallery width beside a content-addressed image once."""
+    if width not in THUMBNAIL_WIDTHS:
+        raise ValueError(f"Unsupported thumbnail width: {width}")
+    target = thumbnail_path(source, width)
     if target.exists():
         return target
     data = source.read_bytes()
     image_info(data)
     with Image.open(io.BytesIO(data)) as image:
-        image.thumbnail((THUMBNAIL_WIDTH, image.height))
+        image = image.convert("RGB")
+        if image.width > width:
+            # One Lanczos pass keeps screenshot text sharper than reduce-then-bicubic.
+            height = max(1, round(image.height * width / image.width))
+            image = image.resize((width, height), Image.Resampling.LANCZOS)
         output = io.BytesIO()
-        image.convert("RGB").save(output, format="WEBP", quality=80)
+        image.save(output, format="WEBP", quality=90, method=6)
     # Hash-named targets sit deep in assets; keep temporary names short for Windows MAX_PATH.
     temporary = target.with_name(f".{uuid4().hex}.tmp")
     try:

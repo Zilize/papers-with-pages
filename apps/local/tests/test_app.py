@@ -545,11 +545,14 @@ def test_thumbnail_is_generated_cached_and_confined_to_assets(tmp_path):
     Image.new("RGB", (1440, 900), "white").save(source)
     (tmp_path / "secret.png").write_bytes(source.read_bytes())
     with TestClient(create_app(tmp_path)) as client:
-        response = client.get("/thumbnails/paper/run/hero.png")
-        assert response.status_code == 200
-        assert "immutable" in response.headers["Cache-Control"]
-        with Image.open(io.BytesIO(response.content)) as image:
-            assert (image.format, image.size) == ("WEBP", (640, 400))
-        assert (source.parent / "hero.thumb.webp").is_file()
+        for query, size in (("", (480, 300)), ("?w=480", (480, 300)), ("?w=960", (960, 600))):
+            response = client.get(f"/thumbnails/paper/run/hero.png{query}")
+            assert response.status_code == 200
+            assert "immutable" in response.headers["Cache-Control"]
+            with Image.open(io.BytesIO(response.content)) as image:
+                assert (image.format, image.size) == ("WEBP", size)
+        assert (source.parent / "hero.w480.webp").is_file()
+        assert (source.parent / "hero.w960.webp").is_file()
+        assert client.get("/thumbnails/paper/run/hero.png?w=640").status_code == 404
         assert client.get("/thumbnails/../secret.png").status_code == 404
         assert client.get("/thumbnails/paper/run/missing.png").status_code == 404
