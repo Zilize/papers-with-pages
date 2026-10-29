@@ -513,3 +513,43 @@ async def test_configurable_render_page_limit(tmp_path, monkeypatch, pages, work
 def test_invalid_render_page_limit(tmp_path, pages):
     with pytest.raises(ValueError, match="Render pages"):
         Collector(Store(tmp_path), render_pages=pages)
+
+
+def test_gallery_index_reuses_unchanged_papers_and_refreshes_changed_ones(tmp_path, monkeypatch):
+    store = Store(tmp_path)
+    key = store.merge(record())
+    store.save_result(key, "first", result())
+    assert len(store.gallery()["items"]) == 1
+    assert read_json(tmp_path / "gallery-index.json")["entries"][key]["item"]
+
+    calls = []
+    original = Store.gallery_entry
+    monkeypatch.setattr(
+        Store, "gallery_entry", lambda self, k: calls.append(k) or original(self, k)
+    )
+    assert len(store.gallery()["items"]) == 1
+    assert calls == []
+
+    store.save_result(key, "second", result(resources=False))
+    assert store.gallery() == {"items": [], "saved": 1}
+    assert calls == [key]
+
+
+def test_thumbnail_is_generated_cached_and_confined_to_assets(tmp_path):
+    import io
+
+    from PIL import Image
+
+    source = tmp_path / "assets" / "paper" / "run" / "hero.png"
+    source.parent.mkdir(parents=True)
+    Image.new("RGB", (1440, 900), "white").save(source)
+    (tmp_path / "secret.png").write_bytes(source.read_bytes())
+    with TestClient(create_app(tmp_path)) as client:
+        response = client.get("/thumbnails/paper/run/hero.png")
+        assert response.status_code == 200
+        assert "immutable" in response.headers["Cache-Control"]
+        with Image.open(io.BytesIO(response.content)) as image:
+            assert (image.format, image.size) == ("WEBP", (640, 400))
+        assert (source.parent / "hero.thumb.webp").is_file()
+        assert client.get("/thumbnails/../secret.png").status_code == 404
+        assert client.get("/thumbnails/paper/run/missing.png").status_code == 404

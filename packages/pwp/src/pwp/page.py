@@ -8,6 +8,7 @@ from urllib.parse import urljoin, urlsplit
 import bibtexparser
 from bs4 import BeautifulSoup
 
+from pwp.affiliations import parse_author_block
 from pwp.errors import RequestError
 from pwp.extract import classify_link, merge_links, normalize_url
 from pwp.extract.links import project_page_exclusion
@@ -117,7 +118,8 @@ def parse_project_page(
     """Extract page facts and resource evidence without assuming paper ownership.
 
     This is CPU-bound; async callers should run it in a worker thread. Pass
-    ``visuals=False`` when the page cannot provide main visuals (for example READMEs).
+    ``visuals=False`` when the page cannot provide main visuals or a title area with
+    author declarations (for example READMEs).
     """
     from pwp.visuals import discover_visuals
 
@@ -194,6 +196,7 @@ def parse_project_page(
         citations=citations,
         authors=list(dict.fromkeys(filter(None, authors))),
         institutions=list(dict.fromkeys(filter(None, institutions))),
+        author_block=parse_author_block(soup) if visuals else None,
         related_paper_ids=linked_paper_ids(links),
     )
 

@@ -18,6 +18,8 @@ arXiv metadata -> entry links -> bounded repository / project-page exploration
 | `network` | Connection-time DNS policy, robots, redirects, request and byte limits |
 | `github` | Repository metadata, README resolution, resource evidence |
 | `page` | HTML facts, links, citations, author and institution declarations |
+| `affiliations` | Author-block names, affiliation markers, footnotes, logos, and JSON-LD |
+| `institutions` | Curated institution registry and offline matching with match rules |
 | `visuals` | Ranked image/video/embed candidates with previews and provenance |
 | `discover` | Bounded traversal, association heuristics, cycle handling |
 | `capture` | Managed browser visit and first-viewport hero screenshot |
@@ -57,6 +59,7 @@ Applications choose what to display, including a hero fallback for empty candida
 
 The hero is a first-viewport screenshot, never a full-page screenshot. Rendered DOM feeds
 back into discovery, so dynamic links join the graph. The same visit produces the hero.
+A rendered DOM cut short by a navigation deadline falls back to the static document.
 Video bodies are not downloaded.
 
 Image files are validated, content-hashed, and written atomically. Each resolve invocation
@@ -97,10 +100,12 @@ streaming, anti-bot, and unusual dynamic sites may yield partial results.
 
 ## Validation and scope
 
-Offline fixtures cover metadata, graph cycles and limits, README links, association,
-images/videos/embeds, artifacts, CLI, callbacks, and cancellation. Opt-in Chromium tests
-check dynamic DOM, hero dimensions, and blocked private requests. CI includes a browser job.
+Offline fixtures cover metadata, graph cycles and limits, README links, author blocks,
+institution matching, association, images/videos/embeds, artifacts, CLI, callbacks, and cancellation. Opt-in
+Chromium tests check dynamic DOM, hero dimensions, and blocked private requests. CI
+includes a browser job.
 
-The package, CLI, and separate local gallery are implemented. Paper full text, LLM
-processing, institution normalization, video downloading/transcoding, and database
-integration remain outside the current scope.
+The package, CLI, and separate local gallery are implemented. Institution matching covers
+the curated registry only; online lookups such as ROR or OpenAlex, paper full text, LLM
+processing, video downloading/transcoding, and database integration remain outside the
+current scope.

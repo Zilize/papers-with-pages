@@ -446,3 +446,26 @@ async def test_concurrent_captures_leave_no_pending_downloads_or_driver_errors(c
             assert not pending
             assert not session._browser.contexts
     assert "Error occurred in event listener" not in capsys.readouterr().err
+
+
+async def test_truncated_dom_falls_back_to_static_document(monkeypatch, tmp_path):
+    from playwright.async_api import Page
+
+    body = "".join(f"<p>Sample paragraph {index} about the project.</p>" for index in range(20))
+    html = f"""<!doctype html><html><head><title>Slow head</title></head><body>
+    <h1>Slow head</h1>
+    <div class="publication-authors"><span>Alice Example<sup>1</sup></span></div>
+    <div class="publication-authors"><span><sup>1</sup>Example University</span></div>
+    <a href="https://github.com/example/project">Code</a>{body}</body></html>"""
+
+    # A slow synchronous script can stop the parser at the deadline, leaving only <head>.
+    async def truncated(self):
+        return "<html><head><title>Slow head</title></head><body></body></html>"
+
+    monkeypatch.setattr(Page, "content", truncated)
+    fetcher = FakeFetcher({"https://project.example/": html})
+    result = await render_page("https://project.example/", fetcher=fetcher, work_dir=tmp_path)
+    assert any(issue.code == "rendered_dom_incomplete" for issue in result.issues)
+    assert result.page.author_block.affiliations[0].name == "Example University"
+    assert result.page.links[0].kind == "repository"
+    assert result.screenshot.path.exists()

@@ -5,6 +5,8 @@ import re
 from contextvars import copy_context
 from dataclasses import dataclass, field
 
+from bs4 import BeautifulSoup
+
 from pwp.browser import RenderSession
 from pwp.errors import PwpError, RequestError
 from pwp.events import EventReporter
@@ -19,6 +21,9 @@ PAGE_TIMEOUT = 60
 BOOTSTRAP_TIMEOUT = 8
 # Subresources have their own allowance so heavy pages cannot starve link discovery.
 MAX_PAGE_ASSETS = 300
+# A rendered body with under half the static body text was cut short; see dom_truncated.
+TRUNCATED_TEXT_RATIO = 0.5
+MIN_STATIC_TEXT = 200
 
 
 class _CaptureClosed(Exception):
@@ -120,6 +125,28 @@ class RenderResult:
     html: str
     screenshot: MediaArtifact | None = None
     issues: list[Issue] = field(default_factory=list)
+
+
+def _body_text_length(html: str) -> int:
+    soup = BeautifulSoup(html, "html.parser")
+    for node in soup(["script", "style", "noscript", "template"]):
+        node.decompose()
+    body = soup.body or soup
+    return len(" ".join(body.get_text(" ").split()))
+
+
+def dom_truncated(rendered: str, static: str) -> bool:
+    """Whether the rendered DOM lost most of the body text the server sent.
+
+    A navigation deadline can stop the parser at a slow synchronous script, leaving a DOM
+    that ends in ``<head>`` although the static document holds the whole page. Pages that
+    build their body with JavaScript have a short static body and are never flagged.
+    """
+    static_length = _body_text_length(static)
+    return (
+        static_length >= MIN_STATIC_TEXT
+        and _body_text_length(rendered) < static_length * TRUNCATED_TEXT_RATIO
+    )
 
 
 async def capture_hero(page, *, work_dir, source_url=None, viewport=(1440, 900), scale=1):
@@ -383,6 +410,23 @@ async def render_page(
                 http_status=initial.status,
                 observed_media=list(observed),
             )
+            if await asyncio.to_thread(dom_truncated, html, initial.text):
+                issues.append(
+                    Issue(
+                        code="rendered_dom_incomplete",
+                        retryable=True,
+                        message="The rendered DOM lost content the server sent; "
+                        "page facts come from the static document",
+                    )
+                )
+                parsed = await asyncio.to_thread(
+                    parse_project_page,
+                    initial.text,
+                    initial.final_url,
+                    original_url=url,
+                    http_status=initial.status,
+                    observed_media=list(observed),
+                )
             screenshot = None
             if work_dir is not None:
                 try:

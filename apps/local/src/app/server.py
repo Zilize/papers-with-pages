@@ -10,12 +10,13 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from filelock import FileLock
+from pwp.errors import PwpError
 from pwp.network import validate_proxy
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from app.credentials import TokenStore, TokenStoreError
 from app.jobs import Collector, HarvestRequest
-from app.storage import Store
+from app.storage import Store, write_thumbnail
 
 STATIC = Path(__file__).parent / "static"
 
@@ -200,6 +201,27 @@ def create_app(
     @api.post("/api/collection/stop")
     async def stop():
         return await api.state.collector.close()
+
+    @api.get("/thumbnails/{path:path}")
+    async def thumbnail(path: str):
+        assets = store.root / "assets"
+        source = (assets / path).resolve()
+        if (
+            not source.is_relative_to(assets)
+            or source.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}
+            or not source.is_file()
+        ):
+            raise HTTPException(404, "Image not found")
+        try:
+            target = await asyncio.to_thread(write_thumbnail, source)
+        except (OSError, PwpError):
+            raise HTTPException(404, "Thumbnail unavailable") from None
+        # Sources are content-addressed, so a thumbnail never changes for its URL.
+        return FileResponse(
+            target,
+            media_type="image/webp",
+            headers={"Cache-Control": "public, max-age=31536000, immutable"},
+        )
 
     api.mount("/static", StaticFiles(directory=STATIC), name="static")
     api.mount("/assets", StaticFiles(directory=store.root / "assets"), name="assets")

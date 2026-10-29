@@ -132,6 +132,27 @@ class Citation(Model):
     issue: Issue | None = None
 
 
+class PageAuthor(Model):
+    name: str
+    markers: list[str] = Field(default_factory=list)
+
+
+class PageAffiliation(Model):
+    name: str
+    marker: str | None = None
+    source: Literal["author_block", "logo", "json_ld"] = "author_block"
+    # Footnote text when the institution comes from a note such as "work done at X".
+    note: str | None = None
+
+
+class AuthorBlock(Model):
+    """Author and affiliation declarations near the page title, as written."""
+
+    authors: list[PageAuthor] = Field(default_factory=list)
+    affiliations: list[PageAffiliation] = Field(default_factory=list)
+    context: str = ""
+
+
 class ProjectPage(Model):
     url: str
     final_url: str
@@ -144,6 +165,7 @@ class ProjectPage(Model):
     citations: list[Citation] = Field(default_factory=list)
     authors: list[str] = Field(default_factory=list)
     institutions: list[str] = Field(default_factory=list)
+    author_block: AuthorBlock | None = None
     related_paper_ids: list[str] = Field(default_factory=list)
 
 

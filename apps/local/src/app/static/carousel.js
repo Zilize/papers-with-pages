@@ -73,8 +73,12 @@ function carousel(item, open) {
       button.setAttribute("aria-label", `View ${item.paper.title}`);
       if (open) button.addEventListener("click", open);
       if (item.cover) {
-        const img = localImage(item.cover, `Project page first viewport: ${item.paper.title}`);
-        img.addEventListener("error", () => button.replaceChildren(placeholder(item.paper)), { once: true });
+        const img = localImage(item.thumbnail || item.cover, `Project page first viewport: ${item.paper.title}`);
+        // Fall back to the full screenshot when a thumbnail cannot be produced.
+        img.addEventListener("error", () => {
+          if (item.thumbnail && img.getAttribute("src") === item.thumbnail) img.src = item.cover;
+          else button.replaceChildren(placeholder(item.paper));
+        });
         button.append(img);
       } else button.append(placeholder(item.paper));
       stage.append(button);

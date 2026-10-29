@@ -140,3 +140,15 @@ def test_lazy_picture_empty_srcset_and_unknown_embed():
         "https://demo.example/",
     }
     assert next(item for item in visuals if item.delivery == "embed").media_type == "unknown"
+
+
+def test_dom_truncation_compares_body_text_with_the_static_document():
+    from pwp.capture import dom_truncated
+
+    body = "<p>" + "Project description and results. " * 20 + "</p>"
+    static = f"<html><head><title>T</title></head><body><h1>T</h1>{body}</body></html>"
+    assert dom_truncated("<html><head><title>T</title></head></html>", static)
+    assert not dom_truncated(static, static)
+    # Script-built pages have a short static body, so rendering is never second-guessed.
+    shell = '<html><body><div id="app"></div><script>render()</script></body></html>'
+    assert not dom_truncated("<html><body></body></html>", shell)

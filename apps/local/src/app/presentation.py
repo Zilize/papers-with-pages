@@ -8,7 +8,7 @@ from pwp.visuals import select_main_video
 
 def prepare(paper, result):
     if not result:
-        return {"cover": None, "videos": [], "problems": [], "warnings": []}
+        return {"cover": None, "thumbnail": None, "videos": [], "problems": [], "warnings": []}
     links = select_resources(
         Paper.model_validate(paper), [ResourceLink.model_validate(r) for r in result["resources"]]
     )
@@ -97,6 +97,7 @@ def prepare(paper, result):
     return {
         "quality": "needs_attention" if problems else "with_warnings" if warnings else "complete",
         "cover": "/assets/" + heroes[0]["path"] if heroes else None,
+        "thumbnail": "/thumbnails/" + heroes[0]["path"] if heroes else None,
         "videos": videos,
         "problems": problems,
         "warnings": warnings,

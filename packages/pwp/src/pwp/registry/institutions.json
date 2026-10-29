@@ -1,0 +1,4398 @@
+{
+  "version": 1,
+  "updated": "2026-10-28",
+  "institutions": [
+    {
+      "id": "mit",
+      "ror": "https://ror.org/042nb2s44",
+      "names": [
+        "Massachusetts Institute of Technology",
+        "麻省理工学院",
+        "MIT CSAIL",
+        "MIT Computer Science and Artificial Intelligence Laboratory",
+        "MIT Media Lab",
+        "Instituto Tecnológico de Massachusetts"
+      ],
+      "acronyms": [
+        "MIT",
+        "CSAIL"
+      ],
+      "domains": [
+        "mit.edu"
+      ],
+      "github_orgs": [
+        "mit-han-lab"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "stanford",
+      "ror": "https://ror.org/00f54p054",
+      "names": [
+        "Stanford University",
+        "Stanford",
+        "斯坦福大学",
+        "Stanford AI Lab",
+        "Stanford Artificial Intelligence Laboratory",
+        "Stanford HAI",
+        "Stanford CRFM",
+        "Leland Stanford Junior University",
+        "Universidad Stanford"
+      ],
+      "acronyms": [
+        "SAIL"
+      ],
+      "domains": [
+        "stanford.edu"
+      ],
+      "github_orgs": [
+        "stanford-crfm",
+        "StanfordVL",
+        "stanfordnlp",
+        "HazyResearch",
+        "stanford-oval"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "berkeley",
+      "ror": "https://ror.org/01an7q238",
+      "names": [
+        "University of California, Berkeley",
+        "加州大学伯克利分校",
+        "UC Berkeley",
+        "Berkeley AI Research",
+        "BAIR",
+        "Berkeley Artificial Intelligence Research",
+        "Cal Berkeley",
+        "Universidad de California en Berkeley",
+        "University of California at Berkeley",
+        "Université de Californie à Berkeley"
+      ],
+      "acronyms": [
+        "UCB"
+      ],
+      "domains": [
+        "berkeley.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "cmu",
+      "ror": "https://ror.org/05x2bcf33",
+      "names": [
+        "Carnegie Mellon University",
+        "卡内基梅隆大学",
+        "Carnegie Mellon",
+        "CMU Robotics Institute",
+        "CMU Language Technologies Institute"
+      ],
+      "acronyms": [
+        "CMU"
+      ],
+      "domains": [
+        "cmu.edu"
+      ],
+      "github_orgs": [
+        "neulab",
+        "cmu-db"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "harvard",
+      "ror": "https://ror.org/03vek6s52",
+      "names": [
+        "Harvard University",
+        "Harvard",
+        "哈佛大学",
+        "Universidad de Harvard"
+      ],
+      "acronyms": [],
+      "domains": [
+        "harvard.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "princeton",
+      "ror": "https://ror.org/00hx57361",
+      "names": [
+        "Princeton University",
+        "Princeton",
+        "普林斯顿大学",
+        "Universidad de Princeton",
+        "Université de princeton"
+      ],
+      "acronyms": [],
+      "domains": [
+        "princeton.edu"
+      ],
+      "github_orgs": [
+        "princeton-nlp",
+        "princeton-vl",
+        "princeton-pli"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "caltech",
+      "ror": "https://ror.org/05dxps055",
+      "names": [
+        "California Institute of Technology",
+        "加州理工学院",
+        "Instituto de Tecnología de California"
+      ],
+      "acronyms": [
+        "Caltech",
+        "CIT"
+      ],
+      "domains": [
+        "caltech.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "cornell",
+      "ror": "https://ror.org/05bnh6r87",
+      "names": [
+        "Cornell University",
+        "康奈尔大学",
+        "Cornell Tech",
+        "Universidad Cornell"
+      ],
+      "acronyms": [],
+      "domains": [
+        "cornell.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uw",
+      "ror": "https://ror.org/00cvxb145",
+      "names": [
+        "University of Washington",
+        "华盛顿大学",
+        "UW Seattle",
+        "Paul G. Allen School of Computer Science & Engineering",
+        "Universidad de Washington",
+        "Université de Washington"
+      ],
+      "acronyms": [],
+      "domains": [
+        "washington.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uiuc",
+      "ror": "https://ror.org/047426m28",
+      "names": [
+        "University of Illinois Urbana-Champaign",
+        "伊利诺伊大学厄巴纳-香槟分校",
+        "University of Illinois at Urbana-Champaign",
+        "Universidad de Illinois en Urbana-Champaign",
+        "University of Illinois",
+        "Université de l'Illinois à Urbana-Champaign"
+      ],
+      "acronyms": [
+        "UIUC"
+      ],
+      "domains": [
+        "illinois.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "umich",
+      "ror": "https://ror.org/00jmfr291",
+      "names": [
+        "University of Michigan",
+        "密歇根大学",
+        "University of Michigan, Ann Arbor",
+        "University of Michigan–Ann Arbor",
+        "Université du Michigan"
+      ],
+      "acronyms": [
+        "UMich"
+      ],
+      "domains": [
+        "umich.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "gatech",
+      "ror": "https://ror.org/01zkghx44",
+      "names": [
+        "Georgia Institute of Technology",
+        "佐治亚理工学院",
+        "Georgia Tech",
+        "Instituto de Tecnología de Georgia"
+      ],
+      "acronyms": [],
+      "domains": [
+        "gatech.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "utaustin",
+      "ror": "https://ror.org/00hj54h04",
+      "names": [
+        "The University of Texas at Austin",
+        "德克萨斯大学奥斯汀分校",
+        "University of Texas at Austin",
+        "Universidad de Texas en Austin",
+        "Université du texas à austin"
+      ],
+      "acronyms": [
+        "UT Austin"
+      ],
+      "domains": [
+        "utexas.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ucla",
+      "ror": "https://ror.org/046rm7j60",
+      "names": [
+        "University of California, Los Angeles",
+        "加州大学洛杉矶分校",
+        "State Normal School at Los Angeles",
+        "UC Los Angeles",
+        "Universidad de California en Los Ángeles",
+        "University of California Southern Branch",
+        "University of California at Los Angeles",
+        "Université de Californie à Los Angeles"
+      ],
+      "acronyms": [
+        "UCLA"
+      ],
+      "domains": [
+        "ucla.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ucsd",
+      "ror": "https://ror.org/0168r3w48",
+      "names": [
+        "University of California, San Diego",
+        "加州大学圣地亚哥分校",
+        "UC San Diego",
+        "University of California San Diego"
+      ],
+      "acronyms": [
+        "UCSD"
+      ],
+      "domains": [
+        "ucsd.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "columbia",
+      "ror": "https://ror.org/00hj8s172",
+      "names": [
+        "Columbia University",
+        "哥伦比亚大学",
+        "Columbia College",
+        "Columbia University in the City of New York",
+        "King's College",
+        "Universidad de Columbia"
+      ],
+      "acronyms": [],
+      "domains": [
+        "columbia.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "nyu",
+      "ror": "https://ror.org/0190ak572",
+      "names": [
+        "New York University",
+        "纽约大学",
+        "Universidad de Nueva York",
+        "Université de New York"
+      ],
+      "acronyms": [
+        "NYU"
+      ],
+      "domains": [
+        "nyu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "yale",
+      "ror": "https://ror.org/03v76x132",
+      "names": [
+        "Yale University",
+        "耶鲁大学",
+        "Universidad Yale",
+        "Yale College"
+      ],
+      "acronyms": [],
+      "domains": [
+        "yale.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "upenn",
+      "ror": "https://ror.org/00b30xv10",
+      "names": [
+        "University of Pennsylvania",
+        "宾夕法尼亚大学"
+      ],
+      "acronyms": [
+        "UPenn"
+      ],
+      "domains": [
+        "upenn.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "jhu",
+      "ror": "https://ror.org/00za53h95",
+      "names": [
+        "Johns Hopkins University",
+        "约翰斯·霍普金斯大学",
+        "Universidad Johns Hopkins"
+      ],
+      "acronyms": [
+        "JHU"
+      ],
+      "domains": [
+        "jhu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "usc",
+      "ror": "https://ror.org/03taz7m60",
+      "names": [
+        "University of Southern California",
+        "南加州大学",
+        "Universidad del Sur de California",
+        "Université de Californie du Sud"
+      ],
+      "acronyms": [
+        "USC"
+      ],
+      "domains": [
+        "usc.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "umd",
+      "ror": "https://ror.org/047s2c258",
+      "names": [
+        "University of Maryland, College Park",
+        "马里兰大学帕克分校",
+        "University of Maryland",
+        "Universidad de Maryland",
+        "Université du Maryland"
+      ],
+      "acronyms": [
+        "UMD"
+      ],
+      "domains": [
+        "umd.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "umass",
+      "ror": "https://ror.org/0072zz521",
+      "names": [
+        "University of Massachusetts Amherst",
+        "马萨诸塞大学阿默斯特分校",
+        "UMass Amherst",
+        "Universidad de Massachusetts Amherst",
+        "Université du massachusetts à amherst"
+      ],
+      "acronyms": [],
+      "domains": [
+        "umass.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uwmadison",
+      "ror": "https://ror.org/01y2jtd41",
+      "names": [
+        "University of Wisconsin–Madison",
+        "威斯康星大学麦迪逊分校",
+        "University of Wisconsin-Madison",
+        "UW-Madison",
+        "UW–Madison",
+        "Universidad de Wisconsin-Madison",
+        "University of Wisconsin - Madison",
+        "Université du Wisconsin à Madison"
+      ],
+      "acronyms": [],
+      "domains": [
+        "wisc.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "purdue",
+      "ror": "https://ror.org/02dqehb95",
+      "names": [
+        "Purdue University",
+        "普渡大学",
+        "Purdue University West Lafayette",
+        "Université de Purdue"
+      ],
+      "acronyms": [],
+      "domains": [
+        "purdue.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "northwestern",
+      "ror": "https://ror.org/000e0be47",
+      "names": [
+        "Northwestern University",
+        "西北大学"
+      ],
+      "acronyms": [],
+      "domains": [
+        "northwestern.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uchicago",
+      "ror": "https://ror.org/024mw5h28",
+      "names": [
+        "University of Chicago",
+        "芝加哥大学",
+        "UChicago",
+        "Universidad de Chicago",
+        "Université de chicago"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uchicago.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ttic",
+      "ror": "https://ror.org/02sn5gb64",
+      "names": [
+        "Toyota Technological Institute at Chicago",
+        "芝加哥丰田工业大学",
+        "TTI-Chicago"
+      ],
+      "acronyms": [
+        "TTIC"
+      ],
+      "domains": [
+        "ttic.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "brown",
+      "ror": "https://ror.org/05gq02987",
+      "names": [
+        "Brown University",
+        "布朗大学",
+        "Universidad Brown"
+      ],
+      "acronyms": [],
+      "domains": [
+        "brown.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "duke",
+      "ror": "https://ror.org/00py81415",
+      "names": [
+        "Duke University",
+        "杜克大学",
+        "Universidad de Duke"
+      ],
+      "acronyms": [],
+      "domains": [
+        "duke.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ucsb",
+      "ror": "https://ror.org/02t274463",
+      "names": [
+        "University of California, Santa Barbara",
+        "加州大学圣塔芭芭拉分校",
+        "UC Santa Barbara",
+        "Universidad de California en Santa Bárbara",
+        "Université de Californie à Santa Barbara"
+      ],
+      "acronyms": [
+        "UCSB"
+      ],
+      "domains": [
+        "ucsb.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uci",
+      "ror": "https://ror.org/04gyf1771",
+      "names": [
+        "University of California, Irvine",
+        "加州大学欧文分校",
+        "UC Irvine",
+        "Universidad de California en Irvine",
+        "Université de Californie à Irvine"
+      ],
+      "acronyms": [
+        "UCI"
+      ],
+      "domains": [
+        "uci.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ucdavis",
+      "ror": "https://ror.org/05rrcem69",
+      "names": [
+        "University of California, Davis",
+        "加州大学戴维斯分校",
+        "UC Davis",
+        "Universidad de California en Davis",
+        "University of California at Davis",
+        "Université de Californie à Davis"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ucdavis.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ucsc",
+      "ror": "https://ror.org/03s65by71",
+      "names": [
+        "University of California, Santa Cruz",
+        "加州大学圣克鲁兹分校",
+        "UC Santa Cruz",
+        "Universidad de California en Santa Cruz",
+        "Université de Californie à Santa Cruz"
+      ],
+      "acronyms": [
+        "UCSC"
+      ],
+      "domains": [
+        "ucsc.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "rice",
+      "ror": "https://ror.org/008zs3103",
+      "names": [
+        "Rice University",
+        "莱斯大学",
+        "Universidad Rice",
+        "William Marsh Rice University"
+      ],
+      "acronyms": [],
+      "domains": [
+        "rice.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "unc",
+      "ror": "https://ror.org/0130frc33",
+      "names": [
+        "University of North Carolina at Chapel Hill",
+        "北卡罗来纳大学教堂山分校",
+        "UNC Chapel Hill",
+        "UNC-Chapel Hill",
+        "Universidad de Carolina del Norte en Chapel Hill",
+        "Université de la Caroline du Nord à Chapel Hill"
+      ],
+      "acronyms": [
+        "UNC"
+      ],
+      "domains": [
+        "unc.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "stonybrook",
+      "ror": "https://ror.org/05qghxh33",
+      "names": [
+        "Stony Brook University",
+        "石溪大学",
+        "SUNY Stony Brook",
+        "State University of New York Stony Brook",
+        "Universidad de Stony Brook",
+        "Université d'État de new york à stony brook"
+      ],
+      "acronyms": [
+        "SBU"
+      ],
+      "domains": [
+        "stonybrook.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "vt",
+      "ror": "https://ror.org/02smfhw86",
+      "names": [
+        "Virginia Tech",
+        "弗吉尼亚理工大学",
+        "Virginia Polytechnic Institute and State University",
+        "Institut polytechnique et université d'État de virginie",
+        "Instituto Politécnico y Universidad Estatal de Virginia"
+      ],
+      "acronyms": [],
+      "domains": [
+        "vt.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "osu",
+      "ror": "https://ror.org/00rs6vg23",
+      "names": [
+        "The Ohio State University",
+        "俄亥俄州立大学",
+        "Ohio State University",
+        "Universidad Estatal de Ohio",
+        "Université d'État de l'Ohio"
+      ],
+      "acronyms": [],
+      "domains": [
+        "osu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "umn",
+      "ror": "https://ror.org/017zqws13",
+      "names": [
+        "University of Minnesota",
+        "明尼苏达大学",
+        "University of Minnesota, Twin Cities"
+      ],
+      "acronyms": [],
+      "domains": [
+        "umn.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "psu",
+      "ror": "https://ror.org/04p491231",
+      "names": [
+        "Pennsylvania State University",
+        "宾夕法尼亚州立大学",
+        "Penn State",
+        "Universidad Estatal de Pensilvania",
+        "Université d'État de Pennsylvanie"
+      ],
+      "acronyms": [],
+      "domains": [
+        "psu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "rutgers",
+      "ror": "https://ror.org/05vt9qd57",
+      "names": [
+        "Rutgers, The State University of New Jersey",
+        "罗格斯大学",
+        "Rutgers University",
+        "Rutgers"
+      ],
+      "acronyms": [],
+      "domains": [
+        "rutgers.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "neu",
+      "ror": "https://ror.org/04t5xt781",
+      "names": [
+        "Northeastern University, Boston",
+        "Northeastern University (Boston)",
+        "美国东北大学",
+        "Khoury College of Computer Sciences"
+      ],
+      "acronyms": [],
+      "domains": [
+        "northeastern.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "asu",
+      "ror": "https://ror.org/03efmqc40",
+      "names": [
+        "Arizona State University",
+        "亚利桑那州立大学",
+        "Universidad Estatal de Arizona",
+        "Université d'État de l'Arizona"
+      ],
+      "acronyms": [
+        "ASU"
+      ],
+      "domains": [
+        "asu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "tamu",
+      "ror": "https://ror.org/01f5ytq51",
+      "names": [
+        "Texas A&M University",
+        "德克萨斯农工大学",
+        "Texas A. & M. University"
+      ],
+      "acronyms": [
+        "TAMU"
+      ],
+      "domains": [
+        "tamu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "bu",
+      "ror": "https://ror.org/05qwgg493",
+      "names": [
+        "Boston University",
+        "波士顿大学",
+        "Boston U",
+        "Universidad de Boston",
+        "Université de Boston"
+      ],
+      "acronyms": [],
+      "domains": [
+        "bu.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "uva",
+      "ror": "https://ror.org/0153tk833",
+      "names": [
+        "University of Virginia",
+        "弗吉尼亚大学",
+        "Universidad de Virginia",
+        "Université de virginie"
+      ],
+      "acronyms": [],
+      "domains": [
+        "virginia.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "emory",
+      "ror": "https://ror.org/03czfpz43",
+      "names": [
+        "Emory University",
+        "埃默里大学"
+      ],
+      "acronyms": [],
+      "domains": [
+        "emory.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "tsinghua",
+      "ror": "https://ror.org/03cve4549",
+      "names": [
+        "Tsinghua University",
+        "Tsinghua",
+        "清华大学"
+      ],
+      "acronyms": [
+        "THU"
+      ],
+      "domains": [
+        "tsinghua.edu.cn"
+      ],
+      "github_orgs": [
+        "THUDM",
+        "thu-ml",
+        "thunlp"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "pku",
+      "ror": "https://ror.org/02v51f717",
+      "names": [
+        "Peking University",
+        "北京大学",
+        "Imperial University of Peking"
+      ],
+      "acronyms": [
+        "PKU"
+      ],
+      "domains": [
+        "pku.edu.cn"
+      ],
+      "github_orgs": [
+        "PKU-YuanGroup"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "sjtu",
+      "ror": "https://ror.org/0220qvk04",
+      "names": [
+        "Shanghai Jiao Tong University",
+        "上海交通大学",
+        "Shanghai Communications University",
+        "Shanghai Jiaotong University",
+        "上海交通大學"
+      ],
+      "acronyms": [
+        "SJTU"
+      ],
+      "domains": [
+        "sjtu.edu.cn"
+      ],
+      "github_orgs": [
+        "sjtu-marl"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "zju",
+      "ror": "https://ror.org/00a2xv884",
+      "names": [
+        "Zhejiang University",
+        "浙江大学",
+        "Chekiang University",
+        "Zheda"
+      ],
+      "acronyms": [
+        "ZJU"
+      ],
+      "domains": [
+        "zju.edu.cn"
+      ],
+      "github_orgs": [
+        "zju3dv",
+        "zjunlp"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "fudan",
+      "ror": "https://ror.org/013q1eq08",
+      "names": [
+        "Fudan University",
+        "复旦大学",
+        "復旦大學"
+      ],
+      "acronyms": [],
+      "domains": [
+        "fudan.edu.cn"
+      ],
+      "github_orgs": [
+        "FudanNLP"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "ustc",
+      "ror": "https://ror.org/04c4dkn09",
+      "names": [
+        "University of Science and Technology of China",
+        "中国科学技术大学"
+      ],
+      "acronyms": [
+        "USTC"
+      ],
+      "domains": [
+        "ustc.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "nju",
+      "ror": "https://ror.org/01rxvg760",
+      "names": [
+        "Nanjing University",
+        "南京大学",
+        "Nanking University"
+      ],
+      "acronyms": [
+        "NJU"
+      ],
+      "domains": [
+        "nju.edu.cn"
+      ],
+      "github_orgs": [
+        "MCG-NJU"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "hit",
+      "ror": "https://ror.org/01yqg2h08",
+      "names": [
+        "Harbin Institute of Technology",
+        "哈尔滨工业大学"
+      ],
+      "acronyms": [
+        "HIT"
+      ],
+      "domains": [
+        "hit.edu.cn"
+      ],
+      "github_orgs": [
+        "HIT-SCIR"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "buaa",
+      "ror": "https://ror.org/00wk2mp56",
+      "names": [
+        "Beihang University",
+        "北京航空航天大学",
+        "Beijing University of Aeronautics and Astronautics"
+      ],
+      "acronyms": [
+        "BUAA"
+      ],
+      "domains": [
+        "buaa.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "whu",
+      "ror": "https://ror.org/033vjfk17",
+      "names": [
+        "Wuhan University",
+        "武汉大学"
+      ],
+      "acronyms": [
+        "WHU"
+      ],
+      "domains": [
+        "whu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "sysu",
+      "ror": "https://ror.org/0064kty71",
+      "names": [
+        "Sun Yat-sen University",
+        "中山大学"
+      ],
+      "acronyms": [
+        "SYSU"
+      ],
+      "domains": [
+        "sysu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "hust",
+      "ror": "https://ror.org/00p991c53",
+      "names": [
+        "Huazhong University of Science and Technology",
+        "华中科技大学",
+        "Huázhōng Kējì Dàxué"
+      ],
+      "acronyms": [
+        "HUST"
+      ],
+      "domains": [
+        "hust.edu.cn"
+      ],
+      "github_orgs": [
+        "hustvl"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "xjtu",
+      "ror": "https://ror.org/017zhmm22",
+      "names": [
+        "Xi'an Jiaotong University",
+        "西安交通大学",
+        "Xi'an Jiao Tong University",
+        "Xian Jiaotong University"
+      ],
+      "acronyms": [
+        "XJTU"
+      ],
+      "domains": [
+        "xjtu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "ruc",
+      "ror": "https://ror.org/041pakw92",
+      "names": [
+        "Renmin University of China",
+        "中国人民大学",
+        "People's University of China",
+        "Zhōngguó Rénmín Dàxué"
+      ],
+      "acronyms": [
+        "RUC"
+      ],
+      "domains": [
+        "ruc.edu.cn"
+      ],
+      "github_orgs": [
+        "RUCAIBox"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "nankai",
+      "ror": "https://ror.org/01y1kjr75",
+      "names": [
+        "Nankai University",
+        "南开大学",
+        "Nánkāi Dàxué"
+      ],
+      "acronyms": [
+        "NKU"
+      ],
+      "domains": [
+        "nankai.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "tongji",
+      "ror": "https://ror.org/03rc6as71",
+      "names": [
+        "Tongji University",
+        "同济大学",
+        "Tongji-Universität",
+        "Tóngjì Dàxué",
+        "同濟大學"
+      ],
+      "acronyms": [],
+      "domains": [
+        "tongji.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "seu",
+      "ror": "https://ror.org/04ct4d772",
+      "names": [
+        "Southeast University",
+        "东南大学",
+        "Dōngnán Dàxué"
+      ],
+      "acronyms": [
+        "SEU"
+      ],
+      "domains": [
+        "seu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "uestc",
+      "ror": "https://ror.org/04qr3zq92",
+      "names": [
+        "University of Electronic Science and Technology of China",
+        "电子科技大学"
+      ],
+      "acronyms": [
+        "UESTC"
+      ],
+      "domains": [
+        "uestc.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "bit",
+      "ror": "https://ror.org/01skt4w74",
+      "names": [
+        "Beijing Institute of Technology",
+        "北京理工大学"
+      ],
+      "acronyms": [
+        "BIT"
+      ],
+      "domains": [
+        "bit.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "bupt",
+      "ror": "https://ror.org/04w9fbh59",
+      "names": [
+        "Beijing University of Posts and Telecommunications",
+        "北京邮电大学"
+      ],
+      "acronyms": [
+        "BUPT"
+      ],
+      "domains": [
+        "bupt.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "shanghaitech",
+      "ror": "https://ror.org/030bhh786",
+      "names": [
+        "ShanghaiTech University",
+        "上海科技大学",
+        "上海科技大學"
+      ],
+      "acronyms": [],
+      "domains": [
+        "shanghaitech.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "westlake",
+      "ror": "https://ror.org/05hfa4n20",
+      "names": [
+        "Westlake University",
+        "西湖大学"
+      ],
+      "acronyms": [
+        "WIAS"
+      ],
+      "domains": [
+        "westlake.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "sustech",
+      "ror": "https://ror.org/049tv2d57",
+      "names": [
+        "Southern University of Science and Technology",
+        "南方科技大学",
+        "South University of Science and Technology of China"
+      ],
+      "acronyms": [
+        "SUSTech",
+        "SUSTC"
+      ],
+      "domains": [
+        "sustech.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "cas",
+      "ror": "https://ror.org/034t30j35",
+      "names": [
+        "Chinese Academy of Sciences",
+        "中国科学院"
+      ],
+      "acronyms": [
+        "CAS"
+      ],
+      "domains": [
+        "cas.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "casia",
+      "ror": "https://ror.org/022c3hy66",
+      "names": [
+        "Institute of Automation, Chinese Academy of Sciences",
+        "中国科学院自动化研究所",
+        "Institute of Automation",
+        "自动化研究所"
+      ],
+      "acronyms": [
+        "CASIA"
+      ],
+      "domains": [
+        "ia.ac.cn"
+      ],
+      "github_orgs": [],
+      "parent": "cas",
+      "country": "CN"
+    },
+    {
+      "id": "ict-cas",
+      "ror": "https://ror.org/0090r4d87",
+      "names": [
+        "Institute of Computing Technology, Chinese Academy of Sciences",
+        "中国科学院计算技术研究所",
+        "Institute of Computing Technology"
+      ],
+      "acronyms": [
+        "ICT"
+      ],
+      "domains": [
+        "ict.ac.cn"
+      ],
+      "github_orgs": [],
+      "parent": "cas",
+      "country": "CN"
+    },
+    {
+      "id": "ucas",
+      "ror": "https://ror.org/05qbk4x57",
+      "names": [
+        "University of Chinese Academy of Sciences",
+        "中国科学院大学"
+      ],
+      "acronyms": [
+        "UCAS"
+      ],
+      "domains": [
+        "ucas.ac.cn"
+      ],
+      "github_orgs": [],
+      "parent": "cas",
+      "country": "CN"
+    },
+    {
+      "id": "xmu",
+      "ror": "https://ror.org/00mcjh785",
+      "names": [
+        "Xiamen University",
+        "厦门大学",
+        "Xiàmén Dàxué"
+      ],
+      "acronyms": [
+        "XMU"
+      ],
+      "domains": [
+        "xmu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "sdu",
+      "ror": "https://ror.org/0207yh398",
+      "names": [
+        "Shandong University",
+        "山东大学",
+        "Shāndōng Dàxué,"
+      ],
+      "acronyms": [
+        "SDU"
+      ],
+      "domains": [
+        "sdu.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "tju",
+      "ror": "https://ror.org/012tb2g32",
+      "names": [
+        "Tianjin University",
+        "天津大学",
+        "Peiyang University"
+      ],
+      "acronyms": [
+        "TJU"
+      ],
+      "domains": [
+        "tju.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "nudt",
+      "ror": "https://ror.org/05d2yfz11",
+      "names": [
+        "National University of Defense Technology",
+        "国防科技大学",
+        "Guófáng Kēxuéjìshù Dàxué",
+        "中国人民解放军国防科学技术大学"
+      ],
+      "acronyms": [
+        "NUDT"
+      ],
+      "domains": [
+        "nudt.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "hku",
+      "ror": "https://ror.org/02zhqgq86",
+      "names": [
+        "University of Hong Kong",
+        "香港大学",
+        "Hong Kong University"
+      ],
+      "acronyms": [
+        "HKU"
+      ],
+      "domains": [
+        "hku.hk"
+      ],
+      "github_orgs": [
+        "HKUDS",
+        "HKUNLP"
+      ],
+      "parent": null,
+      "country": "HK"
+    },
+    {
+      "id": "cuhk",
+      "ror": "https://ror.org/00t33hh48",
+      "names": [
+        "Chinese University of Hong Kong",
+        "香港中文大学",
+        "香港中文大學"
+      ],
+      "acronyms": [
+        "CUHK"
+      ],
+      "domains": [
+        "cuhk.edu.hk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "HK"
+    },
+    {
+      "id": "hkust",
+      "ror": "https://ror.org/00q4vv597",
+      "names": [
+        "Hong Kong University of Science and Technology",
+        "香港科技大学",
+        "香港科技大學"
+      ],
+      "acronyms": [
+        "HKUST"
+      ],
+      "domains": [
+        "hkust.edu.hk",
+        "ust.hk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "HK"
+    },
+    {
+      "id": "hkust-gz",
+      "ror": "https://ror.org/050h0vm43",
+      "names": [
+        "Hong Kong University of Science and Technology (Guangzhou)",
+        "香港科技大学（广州）",
+        "HKUST(GZ)",
+        "HKUST (GZ)",
+        "HKUST-GZ"
+      ],
+      "acronyms": [],
+      "domains": [
+        "hkust-gz.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": "hkust",
+      "country": "CN"
+    },
+    {
+      "id": "cityu",
+      "ror": "https://ror.org/03q8dnn23",
+      "names": [
+        "City University of Hong Kong",
+        "香港城市大学"
+      ],
+      "acronyms": [
+        "CityU"
+      ],
+      "domains": [
+        "cityu.edu.hk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "HK"
+    },
+    {
+      "id": "polyu",
+      "ror": "https://ror.org/0030zas98",
+      "names": [
+        "Hong Kong Polytechnic University",
+        "香港理工大学",
+        "香港理工大學"
+      ],
+      "acronyms": [
+        "PolyU",
+        "HKPU"
+      ],
+      "domains": [
+        "polyu.edu.hk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "HK"
+    },
+    {
+      "id": "cuhk-sz",
+      "ror": "https://ror.org/02d5ks197",
+      "names": [
+        "Chinese University of Hong Kong, Shenzhen",
+        "香港中文大学（深圳）"
+      ],
+      "acronyms": [
+        "CUHK-Shenzhen",
+        "CUHK-SZ",
+        "CUHKSZ"
+      ],
+      "domains": [
+        "cuhk.edu.cn"
+      ],
+      "github_orgs": [],
+      "parent": "cuhk",
+      "country": "CN"
+    },
+    {
+      "id": "ntu-tw",
+      "ror": "https://ror.org/05bqach95",
+      "names": [
+        "National Taiwan University",
+        "国立台湾大学"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ntu.edu.tw"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "TW"
+    },
+    {
+      "id": "sinica",
+      "ror": "https://ror.org/05bxb3784",
+      "names": [
+        "Academia Sinica",
+        "中央研究院",
+        "Central Research Academy",
+        "Chinese Academy"
+      ],
+      "acronyms": [],
+      "domains": [
+        "sinica.edu.tw"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "TW"
+    },
+    {
+      "id": "oxford",
+      "ror": "https://ror.org/052gg0110",
+      "names": [
+        "University of Oxford",
+        "牛津大学",
+        "Oxford University",
+        "Prifysgol Rhydychen"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ox.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "cambridge",
+      "ror": "https://ror.org/013meh722",
+      "names": [
+        "University of Cambridge",
+        "剑桥大学",
+        "Cambridge University",
+        "Prifysgol Caergrawnt",
+        "The Chancellor, Masters, and Scholars of the University of Cambridge"
+      ],
+      "acronyms": [],
+      "domains": [
+        "cam.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "imperial",
+      "ror": "https://ror.org/041kmwe10",
+      "names": [
+        "Imperial College London",
+        "帝国理工学院",
+        "Coleg Imperial Llundain",
+        "Imperial College of Science, Technology and Medicine"
+      ],
+      "acronyms": [],
+      "domains": [
+        "imperial.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "ucl",
+      "ror": "https://ror.org/02jx3x895",
+      "names": [
+        "University College London",
+        "伦敦大学学院",
+        "Coleg Prifysgol Llundain",
+        "London University",
+        "University College, London"
+      ],
+      "acronyms": [
+        "UCL"
+      ],
+      "domains": [
+        "ucl.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "edinburgh",
+      "ror": "https://ror.org/01nrxwf90",
+      "names": [
+        "University of Edinburgh",
+        "爱丁堡大学",
+        "Oilthigh Dhùn Èideann"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ed.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "kcl",
+      "ror": "https://ror.org/0220mzb33",
+      "names": [
+        "King's College London",
+        "伦敦国王学院",
+        "Coleg y Brenin, Llundain"
+      ],
+      "acronyms": [
+        "KCL"
+      ],
+      "domains": [
+        "kcl.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "manchester",
+      "ror": "https://ror.org/027m9bs27",
+      "names": [
+        "University of Manchester",
+        "曼彻斯特大学",
+        "Manchester University",
+        "Prifysgol Manceinion",
+        "University of Manchester Institute of Science and Technology",
+        "Victoria University of Manchester"
+      ],
+      "acronyms": [],
+      "domains": [
+        "manchester.ac.uk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "turing",
+      "ror": "https://ror.org/035dkdb55",
+      "names": [
+        "The Alan Turing Institute",
+        "艾伦·图灵研究所",
+        "Alan Turing Institute"
+      ],
+      "acronyms": [],
+      "domains": [
+        "turing.ac.uk"
+      ],
+      "github_orgs": [
+        "alan-turing-institute"
+      ],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "ethz",
+      "ror": "https://ror.org/05a28rw58",
+      "names": [
+        "ETH Zurich",
+        "苏黎世联邦理工学院",
+        "ETH Zürich",
+        "ETH di Zurigo",
+        "Eidgenössische Technische Hochschule Zürich",
+        "Politecnico Federale di Zurigo",
+        "Swiss Federal Institute of Technology in Zurich",
+        "École Polytechnique Fédérale de Zurich"
+      ],
+      "acronyms": [
+        "ETH"
+      ],
+      "domains": [
+        "ethz.ch"
+      ],
+      "github_orgs": [
+        "eth-sri"
+      ],
+      "parent": null,
+      "country": "CH"
+    },
+    {
+      "id": "epfl",
+      "ror": "https://ror.org/02s376052",
+      "names": [
+        "École Polytechnique Fédérale de Lausanne",
+        "洛桑联邦理工学院",
+        "EPF Lausanne",
+        "ETH Lausanne",
+        "Eidgenössische Technische Hochschule Lausanne",
+        "Federal Institute of Technology Lausanne",
+        "PF di Losanna",
+        "Politecnico Federale di Losanna",
+        "SPF Losanna",
+        "Scola politecnica federala Losanna",
+        "Swiss Federal Institute of Technology in Lausanne"
+      ],
+      "acronyms": [
+        "EPFL"
+      ],
+      "domains": [
+        "epfl.ch"
+      ],
+      "github_orgs": [
+        "EPFL-VILAB"
+      ],
+      "parent": null,
+      "country": "CH"
+    },
+    {
+      "id": "uzh",
+      "ror": "https://ror.org/02crff812",
+      "names": [
+        "University of Zurich",
+        "苏黎世大学",
+        "Università di Zurigo",
+        "Universität Zürich",
+        "Université de Zurich"
+      ],
+      "acronyms": [
+        "UZH"
+      ],
+      "domains": [
+        "uzh.ch"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CH"
+    },
+    {
+      "id": "tum",
+      "ror": "https://ror.org/02kkvpp62",
+      "names": [
+        "Technical University of Munich",
+        "慕尼黑工业大学",
+        "Technische Universitaet Muenchen",
+        "Technische Universität München"
+      ],
+      "acronyms": [
+        "TUM"
+      ],
+      "domains": [
+        "tum.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "lmu",
+      "ror": "https://ror.org/05591te55",
+      "names": [
+        "Ludwig-Maximilians-Universität München",
+        "慕尼黑大学",
+        "LMU Munich",
+        "LMU München",
+        "Ludwig Maximilian University",
+        "Ludwig Maximilian University Munich",
+        "Ludwig Maximilian University of Munich",
+        "Ludwig-Maximilians-Universität in Munich",
+        "University of Munich",
+        "Universität München"
+      ],
+      "acronyms": [
+        "LMU"
+      ],
+      "domains": [
+        "lmu.de"
+      ],
+      "github_orgs": [
+        "CompVis"
+      ],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "mpg",
+      "ror": "https://ror.org/01hhn8329",
+      "names": [
+        "Max Planck Society",
+        "马克斯·普朗克学会",
+        "Max-Planck-Gesellschaft",
+        "Max-Planck-Gesellschaft zur Förderung der Wissenschaften"
+      ],
+      "acronyms": [
+        "MPG"
+      ],
+      "domains": [
+        "mpg.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "mpi-is",
+      "ror": "https://ror.org/04fq9j139",
+      "names": [
+        "Max Planck Institute for Intelligent Systems",
+        "马克斯·普朗克智能系统研究所",
+        "Max-Planck-Institut für Intelligente Systeme"
+      ],
+      "acronyms": [
+        "MPI-IS"
+      ],
+      "domains": [
+        "is.mpg.de"
+      ],
+      "github_orgs": [],
+      "parent": "mpg",
+      "country": "DE"
+    },
+    {
+      "id": "mpi-inf",
+      "ror": "https://ror.org/01w19ak89",
+      "names": [
+        "Max Planck Institute for Informatics",
+        "马克斯·普朗克信息学研究所",
+        "Max-Planck-Institut für Informatik"
+      ],
+      "acronyms": [
+        "MPI-INF",
+        "MPII"
+      ],
+      "domains": [
+        "mpi-inf.mpg.de"
+      ],
+      "github_orgs": [],
+      "parent": "mpg",
+      "country": "DE"
+    },
+    {
+      "id": "tuebingen",
+      "ror": "https://ror.org/03a1kwz48",
+      "names": [
+        "University of Tübingen",
+        "图宾根大学",
+        "Eberhard Karls Universität Tübingen",
+        "Eberhard Karls University, Tübingen"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uni-tuebingen.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "tudarmstadt",
+      "ror": "https://ror.org/05n911h24",
+      "names": [
+        "Technical University of Darmstadt",
+        "达姆施塔特工业大学",
+        "TU Darmstadt",
+        "Technische Universität Darmstadt"
+      ],
+      "acronyms": [],
+      "domains": [
+        "tu-darmstadt.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "heidelberg",
+      "ror": "https://ror.org/038t36y30",
+      "names": [
+        "Heidelberg University",
+        "海德堡大学",
+        "Ruprecht-Karls University Heidelberg",
+        "Ruprecht-Karls-Universitaet Heidelberg",
+        "Ruprecht-Karls-Universität Heidelberg",
+        "University of Heidelberg"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uni-heidelberg.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "saarland",
+      "ror": "https://ror.org/01jdpyv68",
+      "names": [
+        "Saarland University",
+        "萨尔大学",
+        "Universität des Saarlandes"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uni-saarland.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "cispa",
+      "ror": "https://ror.org/02njgxr09",
+      "names": [
+        "CISPA Helmholtz Center for Information Security",
+        "CISPA亥姆霍兹信息安全中心",
+        "Helmholtz Center for Information Security",
+        "Helmholtz-Zentrum für Informationssicherheit"
+      ],
+      "acronyms": [
+        "CISPA"
+      ],
+      "domains": [
+        "cispa.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "dfki",
+      "ror": "https://ror.org/01ayc5b57",
+      "names": [
+        "German Research Centre for Artificial Intelligence",
+        "德国人工智能研究中心",
+        "Deutsches Forschungszentrum für Künstliche Intelligenz"
+      ],
+      "acronyms": [
+        "DFKI"
+      ],
+      "domains": [
+        "dfki.de"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "uva-nl",
+      "ror": "https://ror.org/04dkp9463",
+      "names": [
+        "University of Amsterdam",
+        "阿姆斯特丹大学",
+        "Universiteit van Amsterdam"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uva.nl"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "NL"
+    },
+    {
+      "id": "tudelft",
+      "ror": "https://ror.org/02e2c7k09",
+      "names": [
+        "Delft University of Technology",
+        "代尔夫特理工大学",
+        "TU Delft",
+        "Technische Universiteit Delft"
+      ],
+      "acronyms": [],
+      "domains": [
+        "tudelft.nl"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "NL"
+    },
+    {
+      "id": "kuleuven",
+      "ror": "https://ror.org/05f950310",
+      "names": [
+        "KU Leuven",
+        "鲁汶大学",
+        "Catholic University of Leuven",
+        "Katholieke Universiteit Leuven",
+        "University of Leuven"
+      ],
+      "acronyms": [
+        "KUL"
+      ],
+      "domains": [
+        "kuleuven.be"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "BE"
+    },
+    {
+      "id": "inria",
+      "ror": "https://ror.org/02kvxyf05",
+      "names": [
+        "French Institute for Research in Computer Science and Automation",
+        "法国国家信息与自动化研究所",
+        "Institut de recherche en informatique et en automatique",
+        "Institut national de recherche en informatique et en automatique",
+        "Institut national de recherche en sciences et technologies du numérique",
+        "National Institute for Research in Digital Science and Technology"
+      ],
+      "acronyms": [
+        "INRIA"
+      ],
+      "domains": [
+        "inria.fr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "cnrs",
+      "ror": "https://ror.org/02feahw73",
+      "names": [
+        "French National Centre for Scientific Research",
+        "法国国家科学研究中心",
+        "Centre National de la Recherche Scientifique"
+      ],
+      "acronyms": [
+        "CNRS"
+      ],
+      "domains": [
+        "cnrs.fr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "ens",
+      "ror": "https://ror.org/05a0dhs15",
+      "names": [
+        "École Normale Supérieure - PSL",
+        "巴黎高等师范学院",
+        "École Normale Supérieure",
+        "ENS Paris",
+        "Normale sup"
+      ],
+      "acronyms": [
+        "ENS"
+      ],
+      "domains": [
+        "ens.psl.eu",
+        "ens.fr"
+      ],
+      "github_orgs": [],
+      "parent": "psl",
+      "country": "FR"
+    },
+    {
+      "id": "psl",
+      "ror": "https://ror.org/013cjyk83",
+      "names": [
+        "Université PSL",
+        "巴黎文理研究大学",
+        "PSL Research University",
+        "Université Paris Sciences et Lettres",
+        "Université de recherche Paris Sciences et Lettres"
+      ],
+      "acronyms": [
+        "PSL"
+      ],
+      "domains": [
+        "psl.eu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "ip-paris",
+      "ror": "https://ror.org/042tfbd02",
+      "names": [
+        "Institut Polytechnique de Paris",
+        "巴黎理工学院",
+        "IP Paris"
+      ],
+      "acronyms": [
+        "IPP"
+      ],
+      "domains": [
+        "ip-paris.fr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "polytechnique",
+      "ror": "https://ror.org/05hy3tk52",
+      "names": [
+        "École Polytechnique",
+        "巴黎综合理工学院",
+        "l'X"
+      ],
+      "acronyms": [],
+      "domains": [
+        "polytechnique.edu"
+      ],
+      "github_orgs": [],
+      "parent": "ip-paris",
+      "country": "FR"
+    },
+    {
+      "id": "sorbonne",
+      "ror": "https://ror.org/02en5vm52",
+      "names": [
+        "Sorbonne University",
+        "索邦大学",
+        "Sorbonne Université"
+      ],
+      "acronyms": [],
+      "domains": [
+        "sorbonne-universite.fr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "ku",
+      "ror": "https://ror.org/035b05819",
+      "names": [
+        "University of Copenhagen",
+        "哥本哈根大学",
+        "Copenhagen University",
+        "Københavns Universitet",
+        "Universität Kopenhagen"
+      ],
+      "acronyms": [
+        "UCPH"
+      ],
+      "domains": [
+        "ku.dk"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "DK"
+    },
+    {
+      "id": "kth",
+      "ror": "https://ror.org/026vcq606",
+      "names": [
+        "KTH Royal Institute of Technology",
+        "瑞典皇家理工学院",
+        "Kungliga Tekniska högskolan",
+        "Kuninkaallinen teknillinen korkeakoulu",
+        "Royal Institute of Technology"
+      ],
+      "acronyms": [
+        "KTH"
+      ],
+      "domains": [
+        "kth.se"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "SE"
+    },
+    {
+      "id": "ista",
+      "ror": "https://ror.org/03gnh5541",
+      "names": [
+        "Institute of Science and Technology Austria",
+        "奥地利科学技术研究所",
+        "IST Austria"
+      ],
+      "acronyms": [
+        "ISTA"
+      ],
+      "domains": [
+        "ista.ac.at"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AT"
+    },
+    {
+      "id": "sapienza",
+      "ror": "https://ror.org/02be6w209",
+      "names": [
+        "Sapienza University of Rome",
+        "罗马大学",
+        "Rimska Univerza La Sapienza",
+        "Sapienza University",
+        "Sapienza – Università di Roma",
+        "Universitat de Roma La Sapienza",
+        "Università degli Studi di Roma \"La Sapienza\"",
+        "Université La Sapienza de Rome"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uniroma1.it"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IT"
+    },
+    {
+      "id": "polimi",
+      "ror": "https://ror.org/01nffqt88",
+      "names": [
+        "Politecnico di Milano",
+        "米兰理工大学",
+        "Polytechnic University of Milan",
+        "École Polytechnique de Milan"
+      ],
+      "acronyms": [],
+      "domains": [
+        "polimi.it"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IT"
+    },
+    {
+      "id": "iit-it",
+      "ror": "https://ror.org/042t93s57",
+      "names": [
+        "Istituto Italiano di Tecnologia",
+        "意大利技术研究院",
+        "Italian Institute of Technology"
+      ],
+      "acronyms": [],
+      "domains": [
+        "iit.it"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IT"
+    },
+    {
+      "id": "utoronto",
+      "ror": "https://ror.org/03dbr7087",
+      "names": [
+        "University of Toronto",
+        "多伦多大学",
+        "Université de Toronto"
+      ],
+      "acronyms": [],
+      "domains": [
+        "utoronto.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "umontreal",
+      "ror": "https://ror.org/0161xgx34",
+      "names": [
+        "Université de Montréal",
+        "蒙特利尔大学",
+        "University of Montreal"
+      ],
+      "acronyms": [
+        "UdeM"
+      ],
+      "domains": [
+        "umontreal.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "mcgill",
+      "ror": "https://ror.org/01pxwe438",
+      "names": [
+        "McGill University",
+        "麦吉尔大学",
+        "Université McGill"
+      ],
+      "acronyms": [],
+      "domains": [
+        "mcgill.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "ubc",
+      "ror": "https://ror.org/03rmrcq20",
+      "names": [
+        "University of British Columbia",
+        "不列颠哥伦比亚大学",
+        "Université de la colombie-britannique"
+      ],
+      "acronyms": [
+        "UBC"
+      ],
+      "domains": [
+        "ubc.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "uwaterloo",
+      "ror": "https://ror.org/01aff2v68",
+      "names": [
+        "University of Waterloo",
+        "滑铁卢大学",
+        "UWaterloo",
+        "Université de waterloo"
+      ],
+      "acronyms": [],
+      "domains": [
+        "uwaterloo.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "ualberta",
+      "ror": "https://ror.org/0160cpw27",
+      "names": [
+        "University of Alberta",
+        "阿尔伯塔大学",
+        "UAlberta",
+        "Université de l'Alberta"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ualberta.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "mila",
+      "ror": "https://ror.org/05c22rx21",
+      "names": [
+        "Mila - Quebec Artificial Intelligence Institute",
+        "魁北克人工智能研究所",
+        "Mila",
+        "Institut québécois d’intelligence artificielle",
+        "Mila - Institut québécois d’intelligence artificielle",
+        "Mila-Quebec AI Institute",
+        "Montreal Institute for Learning Algorithms",
+        "Quebec Artificial Intelligence Institute"
+      ],
+      "acronyms": [],
+      "domains": [
+        "mila.quebec"
+      ],
+      "github_orgs": [
+        "mila-iqia"
+      ],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "vector",
+      "ror": "https://ror.org/03kqdja62",
+      "names": [
+        "Vector Institute",
+        "向量研究所",
+        "Institut de Vector",
+        "Vector Institute for Artificial Intelligence"
+      ],
+      "acronyms": [],
+      "domains": [
+        "vectorinstitute.ai"
+      ],
+      "github_orgs": [
+        "VectorInstitute"
+      ],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "amii",
+      "ror": "https://ror.org/03msd8560",
+      "names": [
+        "Alberta Machine Intelligence Institute",
+        "阿尔伯塔机器智能研究所"
+      ],
+      "acronyms": [
+        "Amii"
+      ],
+      "domains": [
+        "amii.ca"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "utokyo",
+      "ror": "https://ror.org/057zh3y96",
+      "names": [
+        "University of Tokyo",
+        "东京大学",
+        "The University of Tokyo",
+        "Todai",
+        "Tōkyō Daigaku",
+        "UTokyo",
+        "とうきょうだいがく",
+        "トウキョウダイガク",
+        "東京大学"
+      ],
+      "acronyms": [],
+      "domains": [
+        "u-tokyo.ac.jp"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "kyoto",
+      "ror": "https://ror.org/02kpeqv85",
+      "names": [
+        "Kyoto University",
+        "京都大学",
+        "Kyōto daigaku"
+      ],
+      "acronyms": [],
+      "domains": [
+        "kyoto-u.ac.jp"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "isct",
+      "ror": "https://ror.org/05dqf9946",
+      "names": [
+        "Institute of Science Tokyo",
+        "东京科学大学",
+        "Tokyo Institute of Technology",
+        "Science Tokyo",
+        "Tokyo Kagaku Daigaku",
+        "Toukyou Kagaku Daigaku",
+        "Tōkyō Kagaku Daigaku",
+        "とうきょうかがくだいがく",
+        "トウキョウカガクダイガク",
+        "東京科学大学",
+        "科学大"
+      ],
+      "acronyms": [
+        "ISCT"
+      ],
+      "domains": [
+        "isct.ac.jp"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "riken",
+      "ror": "https://ror.org/01sjwvz98",
+      "names": [
+        "RIKEN",
+        "日本理化学研究所",
+        "RIKEN Center for Advanced Intelligence Project",
+        "RIKEN AIP",
+        "Institute of Physical and Chemical Research",
+        "理化学研究所"
+      ],
+      "acronyms": [],
+      "domains": [
+        "riken.jp"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "kaist",
+      "ror": "https://ror.org/05apxxy63",
+      "names": [
+        "Korea Advanced Institute of Science and Technology",
+        "韩国科学技术院",
+        "한국과학기술원"
+      ],
+      "acronyms": [
+        "KAIST"
+      ],
+      "domains": [
+        "kaist.ac.kr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "snu",
+      "ror": "https://ror.org/04h9pn542",
+      "names": [
+        "Seoul National University",
+        "首尔大学",
+        "Seoul Daehakgyo",
+        "서울대학교"
+      ],
+      "acronyms": [
+        "SNU"
+      ],
+      "domains": [
+        "snu.ac.kr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "postech",
+      "ror": "https://ror.org/04xysgw12",
+      "names": [
+        "Pohang University of Science and Technology",
+        "浦项科技大学",
+        "포항공과대학교"
+      ],
+      "acronyms": [
+        "POSTECH"
+      ],
+      "domains": [
+        "postech.ac.kr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "yonsei",
+      "ror": "https://ror.org/01wjejq96",
+      "names": [
+        "Yonsei University",
+        "延世大学",
+        "연세대학교"
+      ],
+      "acronyms": [],
+      "domains": [
+        "yonsei.ac.kr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "korea-univ",
+      "ror": "https://ror.org/047dqcg40",
+      "names": [
+        "Korea University",
+        "高丽大学",
+        "Bosung College",
+        "Bosung Professional College",
+        "고려대학교"
+      ],
+      "acronyms": [],
+      "domains": [
+        "korea.ac.kr"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "nus",
+      "ror": "https://ror.org/01tgyzw49",
+      "names": [
+        "National University of Singapore",
+        "新加坡国立大学",
+        "King Edward VII College of Medicine",
+        "Universiti Kebangsaan Singapura",
+        "University of Malaya",
+        "சிங்கப்பூர் தேசியப் பல்கலைக்கழகம்"
+      ],
+      "acronyms": [
+        "NUS"
+      ],
+      "domains": [
+        "nus.edu.sg"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "SG"
+    },
+    {
+      "id": "ntu-sg",
+      "ror": "https://ror.org/02e7b5302",
+      "names": [
+        "Nanyang Technological University",
+        "南洋理工大学",
+        "Universiti Teknologi Nanyang",
+        "நன்யாங் தொழில்நுட்பப் பல்கலைக்கழகம்"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ntu.edu.sg"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "SG"
+    },
+    {
+      "id": "astar",
+      "ror": "https://ror.org/036wvzt09",
+      "names": [
+        "Agency for Science, Technology and Research",
+        "新加坡科技研究局"
+      ],
+      "acronyms": [
+        "A*STAR"
+      ],
+      "domains": [
+        "a-star.edu.sg"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "SG"
+    },
+    {
+      "id": "technion",
+      "ror": "https://ror.org/03qryx823",
+      "names": [
+        "Technion – Israel Institute of Technology",
+        "以色列理工学院",
+        "Technion",
+        "הטכניון – מכון טכנולוגי לישראל",
+        "جامعة تخنيون"
+      ],
+      "acronyms": [],
+      "domains": [
+        "technion.ac.il"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IL"
+    },
+    {
+      "id": "huji",
+      "ror": "https://ror.org/03qxff017",
+      "names": [
+        "Hebrew University of Jerusalem",
+        "耶路撒冷希伯来大学",
+        "Al-Jami'ah al-Ibriyyah fi al-Quds",
+        "Ha-Universita ha-Ivrit bi-Yerushalayim",
+        "Hebrew University",
+        "Hebrew University, Jerusalem",
+        "האוניברסיטה העברית בירושלים",
+        "الجامعة العبرية في القدس"
+      ],
+      "acronyms": [
+        "HUJI"
+      ],
+      "domains": [
+        "huji.ac.il"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IL"
+    },
+    {
+      "id": "tau",
+      "ror": "https://ror.org/04mhzgx49",
+      "names": [
+        "Tel Aviv University",
+        "特拉维夫大学",
+        "جامعة تل أبيب"
+      ],
+      "acronyms": [
+        "TAU"
+      ],
+      "domains": [
+        "tau.ac.il"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IL"
+    },
+    {
+      "id": "weizmann",
+      "ror": "https://ror.org/0316ej306",
+      "names": [
+        "Weizmann Institute of Science",
+        "魏茨曼科学研究所",
+        "Machon Weizmann LeMada",
+        "מכון ויצמן למדע",
+        "معهد وايزمان للعلوم"
+      ],
+      "acronyms": [],
+      "domains": [
+        "weizmann.ac.il"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IL"
+    },
+    {
+      "id": "anu",
+      "ror": "https://ror.org/019wvm592",
+      "names": [
+        "Australian National University",
+        "澳大利亚国立大学"
+      ],
+      "acronyms": [
+        "ANU"
+      ],
+      "domains": [
+        "anu.edu.au"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "usyd",
+      "ror": "https://ror.org/0384j8v12",
+      "names": [
+        "University of Sydney",
+        "悉尼大学",
+        "Sydney University",
+        "The University of Sydney"
+      ],
+      "acronyms": [
+        "USYD"
+      ],
+      "domains": [
+        "sydney.edu.au"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "unimelb",
+      "ror": "https://ror.org/01ej9dk98",
+      "names": [
+        "University of Melbourne",
+        "墨尔本大学",
+        "Melbourne University",
+        "The University of Melbourne"
+      ],
+      "acronyms": [],
+      "domains": [
+        "unimelb.edu.au"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "monash",
+      "ror": "https://ror.org/02bfwt286",
+      "names": [
+        "Monash University",
+        "莫纳什大学"
+      ],
+      "acronyms": [],
+      "domains": [
+        "monash.edu"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "unsw",
+      "ror": "https://ror.org/03r8z3t63",
+      "names": [
+        "UNSW Sydney",
+        "新南威尔士大学",
+        "University of New South Wales"
+      ],
+      "acronyms": [
+        "UNSW"
+      ],
+      "domains": [
+        "unsw.edu.au"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "adelaide",
+      "ror": "https://ror.org/028g18b61",
+      "names": [
+        "University of Adelaide",
+        "阿德莱德大学",
+        "Adelaide University"
+      ],
+      "acronyms": [],
+      "domains": [
+        "adelaide.edu.au"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "AU"
+    },
+    {
+      "id": "mbzuai",
+      "ror": "https://ror.org/0258gkt32",
+      "names": [
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "穆罕默德·本·扎耶德人工智能大学",
+        "MBZ University of Artificial Intelligence",
+        "جامعة محمد بن زايد للذكاء الاصطناعي"
+      ],
+      "acronyms": [
+        "MBZUAI"
+      ],
+      "domains": [
+        "mbzuai.ac.ae"
+      ],
+      "github_orgs": [
+        "mbzuai-oryx",
+        "mbzuai-nlp"
+      ],
+      "parent": null,
+      "country": "AE"
+    },
+    {
+      "id": "kaust",
+      "ror": "https://ror.org/01q3tbs38",
+      "names": [
+        "King Abdullah University of Science and Technology",
+        "阿卜杜拉国王科技大学",
+        "جامعة الملك عبد الله للعلوم والتقنية"
+      ],
+      "acronyms": [
+        "KAUST"
+      ],
+      "domains": [
+        "kaust.edu.sa"
+      ],
+      "github_orgs": [
+        "Vision-CAIR"
+      ],
+      "parent": null,
+      "country": "SA"
+    },
+    {
+      "id": "iisc",
+      "ror": "https://ror.org/04dese585",
+      "names": [
+        "Indian Institute of Science",
+        "印度科学理工学院",
+        "Indian Institute of Science Bangalore",
+        "भारतीय विज्ञान संस्थान",
+        "ভারতীয় বিজ্ঞান সংস্থা",
+        "ਭਾਰਤੀ ਵਿਗਿਆਨ ਅਦਾਰਾ",
+        "ભારતીય વિજ્ઞાન સંસ્થા",
+        "இந்திய அறிவியல் கழகம்",
+        "ఇండియన్ ఇన్ స్టిట్యూట్ ఆఫ్ సైన్స్",
+        "ಭಾರತೀಯ ವಿಜ್ಞಾನ ಸಂಸ್ಥೆ",
+        "ഇന്ത്യൻ ഇൻസ്റ്റിറ്റ്യൂട്ട് ഓഫ് സയൻസ്"
+      ],
+      "acronyms": [
+        "IISc"
+      ],
+      "domains": [
+        "iisc.ac.in"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IN"
+    },
+    {
+      "id": "iitb",
+      "ror": "https://ror.org/02qyf5152",
+      "names": [
+        "Indian Institute of Technology Bombay",
+        "印度理工学院孟买分校",
+        "Institut indien de technologie de bombay",
+        "भारतीय तंत्रज्ञान संस्था, मुंबई",
+        "भारतीय प्रौद्योगिकी संस्थान मुम्बई",
+        "ਇੰਡੀਅਨ ਇੰਸਟੀਚਿਊਟ ਆਫ਼ ਟੈਕਨਾਲੋਜੀ",
+        "இந்திய தொழில்நுட்பக் கழகம் மும்பை",
+        "ఐఐటీ బాంబే",
+        "ഇന്ത്യൻ ഇൻസ്റ്റിറ്റ്യൂട്ട് ഓഫ് ടെക്നോളജി ബോംബെ"
+      ],
+      "acronyms": [
+        "IIT Bombay",
+        "IITB"
+      ],
+      "domains": [
+        "iitb.ac.in"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IN"
+    },
+    {
+      "id": "iitd",
+      "ror": "https://ror.org/049tgcd06",
+      "names": [
+        "Indian Institute of Technology Delhi",
+        "印度理工学院德里分校",
+        "Institut indien de technologie de delhi",
+        "भारतीय तंत्रज्ञान संस्था",
+        "भारतीय प्रौद्योगिकी संस्थान दिल्ली",
+        "இந்திய தொழில்நுட்பக் கழகம் தில்லி",
+        "ఇండియన్ ఇన్స్టిట్యూట్ ఆఫ్ టెక్నాలజీ ఢిల్లీ",
+        "ಇಂಡಿಯನ್ ಇನ್ ಸ್ಟಿಟ್ಯೂಟ್ ಆಫ್ ಟೆಕ್ನಾಲಜಿ ದೆಹಲಿ",
+        "ഇന്ത്യൻ ഇൻസ്റ്റിറ്റ്യൂട്ട് ഓഫ് ടെക്നോളജി ഡെൽഹി"
+      ],
+      "acronyms": [
+        "IIT Delhi",
+        "IITD"
+      ],
+      "domains": [
+        "iitd.ac.in"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "IN"
+    },
+    {
+      "id": "google",
+      "ror": "https://ror.org/00njsd438",
+      "names": [
+        "Google",
+        "谷歌",
+        "Google LLC",
+        "Googleplex"
+      ],
+      "acronyms": [],
+      "domains": [
+        "google.com"
+      ],
+      "github_orgs": [
+        "google"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "google-deepmind",
+      "ror": "https://ror.org/00971b260",
+      "names": [
+        "Google DeepMind",
+        "谷歌DeepMind",
+        "DeepMind"
+      ],
+      "acronyms": [],
+      "domains": [
+        "deepmind.google",
+        "deepmind.com"
+      ],
+      "github_orgs": [
+        "google-deepmind",
+        "deepmind"
+      ],
+      "parent": "google",
+      "country": "GB"
+    },
+    {
+      "id": "google-research",
+      "ror": null,
+      "names": [
+        "Google Research",
+        "谷歌研究院",
+        "Google Brain"
+      ],
+      "acronyms": [],
+      "domains": [
+        "research.google"
+      ],
+      "github_orgs": [
+        "google-research"
+      ],
+      "parent": "google",
+      "country": "US"
+    },
+    {
+      "id": "meta",
+      "ror": "https://ror.org/01zbnvs85",
+      "names": [
+        "Meta",
+        "Meta Platforms",
+        "Facebook"
+      ],
+      "acronyms": [],
+      "domains": [
+        "meta.com"
+      ],
+      "github_orgs": [
+        "facebook",
+        "meta-llama"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "fair",
+      "ror": null,
+      "names": [
+        "FAIR",
+        "Meta AI 研究院",
+        "Meta AI",
+        "Meta FAIR",
+        "Facebook AI Research",
+        "Fundamental AI Research"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ai.meta.com"
+      ],
+      "github_orgs": [
+        "facebookresearch"
+      ],
+      "parent": "meta",
+      "country": "US"
+    },
+    {
+      "id": "microsoft",
+      "ror": "https://ror.org/00d0nc645",
+      "names": [
+        "Microsoft",
+        "微软",
+        "Microsoft Corporation"
+      ],
+      "acronyms": [],
+      "domains": [
+        "microsoft.com"
+      ],
+      "github_orgs": [
+        "microsoft"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "msr",
+      "ror": null,
+      "names": [
+        "Microsoft Research",
+        "微软研究院"
+      ],
+      "acronyms": [
+        "MSR"
+      ],
+      "domains": [
+        "research.microsoft.com"
+      ],
+      "github_orgs": [],
+      "parent": "microsoft",
+      "country": "US"
+    },
+    {
+      "id": "msra",
+      "ror": "https://ror.org/0300m5276",
+      "names": [
+        "Microsoft Research Asia",
+        "微软亚洲研究院"
+      ],
+      "acronyms": [
+        "MSRA"
+      ],
+      "domains": [],
+      "github_orgs": [],
+      "parent": "msr",
+      "country": "CN"
+    },
+    {
+      "id": "openai",
+      "ror": "https://ror.org/05wx9n238",
+      "names": [
+        "OpenAI"
+      ],
+      "acronyms": [],
+      "domains": [
+        "openai.com"
+      ],
+      "github_orgs": [
+        "openai"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "anthropic",
+      "ror": "https://ror.org/056y0v115",
+      "names": [
+        "Anthropic"
+      ],
+      "acronyms": [],
+      "domains": [
+        "anthropic.com"
+      ],
+      "github_orgs": [
+        "anthropics"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "nvidia",
+      "ror": "https://ror.org/03jdj4y14",
+      "names": [
+        "NVIDIA",
+        "英伟达",
+        "NVIDIA Corporation",
+        "NVIDIA Corp"
+      ],
+      "acronyms": [],
+      "domains": [
+        "nvidia.com"
+      ],
+      "github_orgs": [
+        "NVIDIA"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "nvidia-research",
+      "ror": null,
+      "names": [
+        "NVIDIA Research",
+        "英伟达研究院"
+      ],
+      "acronyms": [],
+      "domains": [
+        "research.nvidia.com"
+      ],
+      "github_orgs": [
+        "NVlabs",
+        "nv-tlabs"
+      ],
+      "parent": "nvidia",
+      "country": "US"
+    },
+    {
+      "id": "apple",
+      "ror": "https://ror.org/059hsda18",
+      "names": [
+        "Apple",
+        "苹果",
+        "Apple Inc.",
+        "Apple Computer Company",
+        "Apple Computers"
+      ],
+      "acronyms": [],
+      "domains": [
+        "apple.com"
+      ],
+      "github_orgs": [
+        "apple"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "amazon",
+      "ror": "https://ror.org/04mv4n011",
+      "names": [
+        "Amazon",
+        "亚马逊",
+        "Amazon.com",
+        "Amazon Web Services",
+        "AWS AI Labs",
+        "Amazon AGI"
+      ],
+      "acronyms": [
+        "AWS"
+      ],
+      "domains": [
+        "amazon.com",
+        "amazon.science"
+      ],
+      "github_orgs": [
+        "amazon-science",
+        "awslabs",
+        "aws"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ibm",
+      "ror": "https://ror.org/05hh8d621",
+      "names": [
+        "IBM",
+        "International Business Machines"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ibm.com"
+      ],
+      "github_orgs": [
+        "IBM"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ibm-research",
+      "ror": null,
+      "names": [
+        "IBM Research",
+        "IBM研究院"
+      ],
+      "acronyms": [],
+      "domains": [
+        "research.ibm.com"
+      ],
+      "github_orgs": [],
+      "parent": "ibm",
+      "country": "US"
+    },
+    {
+      "id": "intel",
+      "ror": "https://ror.org/01ek73717",
+      "names": [
+        "Intel",
+        "英特尔",
+        "Intel Corporation"
+      ],
+      "acronyms": [],
+      "domains": [
+        "intel.com"
+      ],
+      "github_orgs": [
+        "intel"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "intel-labs",
+      "ror": null,
+      "names": [
+        "Intel Labs",
+        "英特尔研究院"
+      ],
+      "acronyms": [],
+      "domains": [],
+      "github_orgs": [
+        "IntelLabs"
+      ],
+      "parent": "intel",
+      "country": "US"
+    },
+    {
+      "id": "adobe",
+      "ror": "https://ror.org/059tvcg64",
+      "names": [
+        "Adobe",
+        "Adobe Inc."
+      ],
+      "acronyms": [],
+      "domains": [
+        "adobe.com"
+      ],
+      "github_orgs": [
+        "adobe"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "adobe-research",
+      "ror": null,
+      "names": [
+        "Adobe Research",
+        "Adobe研究院"
+      ],
+      "acronyms": [],
+      "domains": [
+        "research.adobe.com"
+      ],
+      "github_orgs": [
+        "adobe-research"
+      ],
+      "parent": "adobe",
+      "country": "US"
+    },
+    {
+      "id": "salesforce",
+      "ror": "https://ror.org/057315g56",
+      "names": [
+        "Salesforce",
+        "Salesforce Research",
+        "Salesforce AI Research"
+      ],
+      "acronyms": [],
+      "domains": [
+        "salesforce.com"
+      ],
+      "github_orgs": [
+        "salesforce",
+        "SalesforceAIResearch"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "qualcomm",
+      "ror": "https://ror.org/002zrf773",
+      "names": [
+        "Qualcomm",
+        "高通",
+        "Qualcomm AI Research"
+      ],
+      "acronyms": [],
+      "domains": [
+        "qualcomm.com"
+      ],
+      "github_orgs": [
+        "Qualcomm-AI-research",
+        "quic"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "snap",
+      "ror": "https://ror.org/04dgkhg68",
+      "names": [
+        "Snap Inc.",
+        "Snap",
+        "Snap Research",
+        "Snapchat"
+      ],
+      "acronyms": [],
+      "domains": [
+        "snap.com"
+      ],
+      "github_orgs": [
+        "snap-research"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "xai",
+      "ror": "https://ror.org/05febkk55",
+      "names": [
+        "xAI"
+      ],
+      "acronyms": [],
+      "domains": [
+        "x.ai"
+      ],
+      "github_orgs": [
+        "xai-org"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "ai2",
+      "ror": "https://ror.org/05w520734",
+      "names": [
+        "Allen Institute for Artificial Intelligence",
+        "艾伦人工智能研究所",
+        "Allen Institute for AI"
+      ],
+      "acronyms": [
+        "AI2"
+      ],
+      "domains": [
+        "allenai.org"
+      ],
+      "github_orgs": [
+        "allenai"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "tri",
+      "ror": "https://ror.org/04fpkc108",
+      "names": [
+        "Toyota Research Institute",
+        "丰田研究院",
+        "Toyota Research Institute, Inc."
+      ],
+      "acronyms": [
+        "TRI"
+      ],
+      "domains": [
+        "tri.global"
+      ],
+      "github_orgs": [
+        "TRI-ML"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "huggingface",
+      "ror": "https://ror.org/02grspc61",
+      "names": [
+        "Hugging Face",
+        "HuggingFace"
+      ],
+      "acronyms": [],
+      "domains": [
+        "huggingface.co"
+      ],
+      "github_orgs": [
+        "huggingface"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "together",
+      "ror": null,
+      "names": [
+        "Together AI",
+        "Together Computer"
+      ],
+      "acronyms": [],
+      "domains": [],
+      "github_orgs": [],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "databricks",
+      "ror": "https://ror.org/01ynzx943",
+      "names": [
+        "Databricks",
+        "Mosaic AI",
+        "MosaicML",
+        "Databricks Inc"
+      ],
+      "acronyms": [],
+      "domains": [
+        "databricks.com"
+      ],
+      "github_orgs": [
+        "databricks",
+        "mosaicml"
+      ],
+      "parent": null,
+      "country": "US"
+    },
+    {
+      "id": "mistral",
+      "ror": "https://ror.org/05w9p7918",
+      "names": [
+        "Mistral AI",
+        "Mistral"
+      ],
+      "acronyms": [],
+      "domains": [
+        "mistral.ai"
+      ],
+      "github_orgs": [
+        "mistralai"
+      ],
+      "parent": null,
+      "country": "FR"
+    },
+    {
+      "id": "cohere",
+      "ror": "https://ror.org/050yr0479",
+      "names": [
+        "Cohere",
+        "Cohere For AI",
+        "Cohere Labs"
+      ],
+      "acronyms": [],
+      "domains": [
+        "cohere.com"
+      ],
+      "github_orgs": [
+        "cohere-ai",
+        "Cohere-Labs"
+      ],
+      "parent": null,
+      "country": "CA"
+    },
+    {
+      "id": "stability",
+      "ror": null,
+      "names": [
+        "Stability AI"
+      ],
+      "acronyms": [],
+      "domains": [
+        "stability.ai"
+      ],
+      "github_orgs": [
+        "Stability-AI"
+      ],
+      "parent": null,
+      "country": "GB"
+    },
+    {
+      "id": "bosch",
+      "ror": "https://ror.org/01fe0jt45",
+      "names": [
+        "Bosch",
+        "博世",
+        "Robert Bosch GmbH",
+        "Bosch Center for Artificial Intelligence"
+      ],
+      "acronyms": [
+        "BCAI"
+      ],
+      "domains": [
+        "bosch.de",
+        "bosch.com"
+      ],
+      "github_orgs": [
+        "boschresearch"
+      ],
+      "parent": null,
+      "country": "DE"
+    },
+    {
+      "id": "naver",
+      "ror": "https://ror.org/04nzrnx83",
+      "names": [
+        "NAVER",
+        "NAVER Cloud",
+        "NAVER AI Lab",
+        "NAVER LABS Europe",
+        "네이버"
+      ],
+      "acronyms": [],
+      "domains": [
+        "navercorp.com"
+      ],
+      "github_orgs": [
+        "naver",
+        "naver-ai",
+        "clovaai"
+      ],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "samsung",
+      "ror": "https://ror.org/04w3jy968",
+      "names": [
+        "Samsung",
+        "三星",
+        "Samsung Electronics",
+        "Samsung Research",
+        "Samsung AI Center",
+        "삼성"
+      ],
+      "acronyms": [],
+      "domains": [
+        "samsung.com"
+      ],
+      "github_orgs": [
+        "Samsung"
+      ],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "lg-ai",
+      "ror": "https://ror.org/00nt82y31",
+      "names": [
+        "LG AI Research",
+        "LG AI研究院",
+        "LG AI 연구원"
+      ],
+      "acronyms": [],
+      "domains": [
+        "lgresearch.ai"
+      ],
+      "github_orgs": [
+        "LG-AI-EXAONE"
+      ],
+      "parent": null,
+      "country": "KR"
+    },
+    {
+      "id": "sony",
+      "ror": "https://ror.org/04wzv3n59",
+      "names": [
+        "Sony",
+        "索尼",
+        "Sony Group",
+        "Sony AI",
+        "Sony Research",
+        "ソニー株式会社"
+      ],
+      "acronyms": [],
+      "domains": [
+        "sony.com",
+        "sony.net"
+      ],
+      "github_orgs": [
+        "sony",
+        "SonyResearch"
+      ],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "sakana",
+      "ror": "https://ror.org/027eejh88",
+      "names": [
+        "Sakana AI",
+        "Sakana AI株式会社"
+      ],
+      "acronyms": [],
+      "domains": [
+        "sakana.ai"
+      ],
+      "github_orgs": [
+        "SakanaAI"
+      ],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "pfn",
+      "ror": "https://ror.org/05xeefy56",
+      "names": [
+        "Preferred Networks",
+        "Preferred Networks, Inc.",
+        "株式会社Preferred Networks"
+      ],
+      "acronyms": [
+        "PFN"
+      ],
+      "domains": [
+        "preferred.jp"
+      ],
+      "github_orgs": [
+        "pfnet"
+      ],
+      "parent": null,
+      "country": "JP"
+    },
+    {
+      "id": "baidu",
+      "ror": "https://ror.org/03vs3wt56",
+      "names": [
+        "Baidu",
+        "百度",
+        "Baidu Research",
+        "Baidu Inc.",
+        "Baidu Inc"
+      ],
+      "acronyms": [],
+      "domains": [
+        "baidu.com"
+      ],
+      "github_orgs": [
+        "baidu"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "alibaba",
+      "ror": "https://ror.org/00k642b80",
+      "names": [
+        "Alibaba",
+        "阿里巴巴",
+        "Alibaba Group",
+        "Alibaba Cloud",
+        "Alibaba Inc.",
+        "Ālǐbābā Jítuán Kònggǔ Yǒuxiàn Gōngsī",
+        "阿里巴巴集团控股有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "alibabagroup.com",
+        "alibaba.com"
+      ],
+      "github_orgs": [
+        "alibaba"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "damo",
+      "ror": "https://ror.org/0448px924",
+      "names": [
+        "DAMO Academy",
+        "阿里巴巴达摩院",
+        "Alibaba DAMO Academy",
+        "Academy for Discovery, Adventure, Momentum and Outlook",
+        "达摩院"
+      ],
+      "acronyms": [],
+      "domains": [
+        "damo.alibaba.com"
+      ],
+      "github_orgs": [
+        "DAMO-NLP-SG",
+        "alibaba-damo-academy"
+      ],
+      "parent": "alibaba",
+      "country": "CN"
+    },
+    {
+      "id": "qwen",
+      "ror": null,
+      "names": [
+        "Qwen Team",
+        "通义千问团队",
+        "Qwen"
+      ],
+      "acronyms": [],
+      "domains": [
+        "qwen.ai"
+      ],
+      "github_orgs": [
+        "QwenLM"
+      ],
+      "parent": "alibaba",
+      "country": "CN"
+    },
+    {
+      "id": "tongyi",
+      "ror": null,
+      "names": [
+        "Tongyi Lab",
+        "通义实验室"
+      ],
+      "acronyms": [],
+      "domains": [],
+      "github_orgs": [
+        "Alibaba-NLP"
+      ],
+      "parent": "alibaba",
+      "country": "CN"
+    },
+    {
+      "id": "tencent",
+      "ror": "https://ror.org/00hhjss72",
+      "names": [
+        "Tencent",
+        "腾讯",
+        "Tencent Inc.",
+        "Téngxùn Kònggǔ Yǒuxiàn Gōngsī",
+        "腾讯控股有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "tencent.com"
+      ],
+      "github_orgs": [
+        "Tencent"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "tencent-ai-lab",
+      "ror": null,
+      "names": [
+        "Tencent AI Lab",
+        "腾讯AI Lab"
+      ],
+      "acronyms": [],
+      "domains": [
+        "ai.tencent.com"
+      ],
+      "github_orgs": [],
+      "parent": "tencent",
+      "country": "CN"
+    },
+    {
+      "id": "tencent-arc",
+      "ror": null,
+      "names": [
+        "ARC Lab",
+        "腾讯ARC实验室",
+        "Tencent ARC Lab",
+        "Tencent ARC"
+      ],
+      "acronyms": [],
+      "domains": [
+        "arc.tencent.com"
+      ],
+      "github_orgs": [
+        "TencentARC"
+      ],
+      "parent": "tencent",
+      "country": "CN"
+    },
+    {
+      "id": "tencent-hunyuan",
+      "ror": null,
+      "names": [
+        "Tencent Hunyuan",
+        "腾讯混元"
+      ],
+      "acronyms": [],
+      "domains": [
+        "hunyuan.tencent.com",
+        "hy.tencent.com"
+      ],
+      "github_orgs": [
+        "Tencent-Hunyuan"
+      ],
+      "parent": "tencent",
+      "country": "CN"
+    },
+    {
+      "id": "bytedance",
+      "ror": "https://ror.org/04m8av638",
+      "names": [
+        "ByteDance",
+        "字节跳动",
+        "ByteDance Inc."
+      ],
+      "acronyms": [],
+      "domains": [
+        "bytedance.com"
+      ],
+      "github_orgs": [
+        "bytedance"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "bytedance-seed",
+      "ror": null,
+      "names": [
+        "ByteDance Seed",
+        "字节跳动Seed"
+      ],
+      "acronyms": [],
+      "domains": [
+        "seed.bytedance.com"
+      ],
+      "github_orgs": [
+        "ByteDance-Seed"
+      ],
+      "parent": "bytedance",
+      "country": "CN"
+    },
+    {
+      "id": "huawei",
+      "ror": "https://ror.org/00cmhce21",
+      "names": [
+        "Huawei",
+        "华为",
+        "Huawei Technologies",
+        "Huawei Technologies Co., Ltd.",
+        "华为技术有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "huawei.com"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "huawei-noah",
+      "ror": null,
+      "names": [
+        "Huawei Noah's Ark Lab",
+        "华为诺亚方舟实验室",
+        "Noah's Ark Lab"
+      ],
+      "acronyms": [],
+      "domains": [
+        "noahlab.com.hk"
+      ],
+      "github_orgs": [
+        "huawei-noah"
+      ],
+      "parent": "huawei",
+      "country": "CN"
+    },
+    {
+      "id": "shlab",
+      "ror": "https://ror.org/03wkvpx79",
+      "names": [
+        "Shanghai Artificial Intelligence Laboratory",
+        "上海人工智能实验室",
+        "Shanghai AI Laboratory",
+        "Shanghai AI Lab"
+      ],
+      "acronyms": [],
+      "domains": [
+        "pjlab.org.cn",
+        "shlab.org.cn"
+      ],
+      "github_orgs": [
+        "OpenGVLab",
+        "InternLM"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "baai",
+      "ror": "https://ror.org/016a74861",
+      "names": [
+        "Beijing Academy of Artificial Intelligence",
+        "北京智源人工智能研究院"
+      ],
+      "acronyms": [
+        "BAAI"
+      ],
+      "domains": [
+        "baai.ac.cn"
+      ],
+      "github_orgs": [
+        "FlagOpen",
+        "baaivision"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "pcl",
+      "ror": "https://ror.org/03qdqbt06",
+      "names": [
+        "Peng Cheng Laboratory",
+        "鹏城实验室",
+        "Pengcheng Laboratory",
+        "Shenzhen Cyberspace Science and Technology Laboratory"
+      ],
+      "acronyms": [],
+      "domains": [
+        "pcl.ac.cn"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "zhejianglab",
+      "ror": "https://ror.org/02m2h7991",
+      "names": [
+        "Zhejiang Lab",
+        "之江实验室"
+      ],
+      "acronyms": [],
+      "domains": [
+        "zhejianglab.org",
+        "zhejianglab.com"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "idea",
+      "ror": null,
+      "names": [
+        "International Digital Economy Academy",
+        "粤港澳大湾区数字经济研究院",
+        "IDEA Research"
+      ],
+      "acronyms": [
+        "IDEA"
+      ],
+      "domains": [
+        "idea.edu.cn"
+      ],
+      "github_orgs": [
+        "IDEA-Research"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "sensetime",
+      "ror": "https://ror.org/049wsmj07",
+      "names": [
+        "SenseTime",
+        "商汤科技",
+        "SenseTime Research",
+        "Beijing Sensetime Technology Development Co Ltd.",
+        "Sensetime Group Ltd.",
+        "商汤",
+        "商汤集团有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "sensetime.com"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "megvii",
+      "ror": "https://ror.org/040b32p69",
+      "names": [
+        "Megvii",
+        "旷视科技",
+        "MEGVII Technology",
+        "Megvii Research",
+        "Megvii Inc",
+        "Megvii Technology Limited",
+        "Megvii Technology Ltd",
+        "北京旷视科技有限公司",
+        "旷视"
+      ],
+      "acronyms": [],
+      "domains": [
+        "megvii.com"
+      ],
+      "github_orgs": [
+        "megvii-research",
+        "MegEngine"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "kuaishou",
+      "ror": "https://ror.org/0258as409",
+      "names": [
+        "Kuaishou",
+        "快手",
+        "Kuaishou Technology",
+        "Kling Team",
+        "Beijing Kuaishou Technology Ltd",
+        "Kwai Inc",
+        "北京快手科技有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "kuaishou.com"
+      ],
+      "github_orgs": [
+        "Kwai-Kolors"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "xiaomi",
+      "ror": "https://ror.org/029f7bn57",
+      "names": [
+        "Xiaomi",
+        "小米",
+        "Xiaomi Corporation"
+      ],
+      "acronyms": [],
+      "domains": [
+        "mi.com"
+      ],
+      "github_orgs": [
+        "XiaomiMiMo"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "antgroup",
+      "ror": "https://ror.org/00g5w7n47",
+      "names": [
+        "Ant Group",
+        "蚂蚁集团",
+        "Ant Research",
+        "Ant Financial",
+        "Ant Financial Services Group",
+        "Ant Group Co., Ltd.",
+        "アントグループ",
+        "蚂蚁科技集团股份有限公司",
+        "앤트그룹"
+      ],
+      "acronyms": [],
+      "domains": [
+        "antgroup.com"
+      ],
+      "github_orgs": [
+        "inclusionAI",
+        "antgroup"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "meituan",
+      "ror": "https://ror.org/0272kpg92",
+      "names": [
+        "Meituan",
+        "美团",
+        "Meituan-Dianping"
+      ],
+      "acronyms": [],
+      "domains": [
+        "meituan.com"
+      ],
+      "github_orgs": [
+        "meituan-longcat",
+        "Meituan-Dianping"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "jd",
+      "ror": "https://ror.org/01dkjkq64",
+      "names": [
+        "JD.com",
+        "京东",
+        "JD Explore Academy",
+        "360buy"
+      ],
+      "acronyms": [],
+      "domains": [
+        "jd.com"
+      ],
+      "github_orgs": [
+        "jd-opensource"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "iflytek",
+      "ror": "https://ror.org/009pwww24",
+      "names": [
+        "iFLYTEK",
+        "科大讯飞",
+        "Anhui Ustc Iflytek Science and Technology Co Ltd",
+        "Iflytek Co Ltd",
+        "Keda Xunfei Co Ltd",
+        "科大讯飞股份有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "iflytek.com"
+      ],
+      "github_orgs": [],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "deepseek",
+      "ror": "https://ror.org/05wa54d95",
+      "names": [
+        "DeepSeek",
+        "深度求索",
+        "DeepSeek-AI",
+        "DeepSeek AI",
+        "杭州深度求索人工智能基础技术研究有限公司"
+      ],
+      "acronyms": [],
+      "domains": [
+        "deepseek.com"
+      ],
+      "github_orgs": [
+        "deepseek-ai"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "moonshot",
+      "ror": "https://ror.org/03ej19f56",
+      "names": [
+        "Moonshot AI",
+        "月之暗面",
+        "Kimi Team"
+      ],
+      "acronyms": [],
+      "domains": [
+        "moonshot.ai",
+        "moonshot.cn"
+      ],
+      "github_orgs": [
+        "MoonshotAI"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "zhipu",
+      "ror": "https://ror.org/005dzvw93",
+      "names": [
+        "Zhipu AI",
+        "智谱",
+        "Z.ai",
+        "Beijing Knowledge Atlas Technology Co Ltd",
+        "Beijing Zhipu Huazhang Technology Co.",
+        "北京智谱华章科技有限公司",
+        "智谱ai"
+      ],
+      "acronyms": [],
+      "domains": [
+        "zhipuai.cn",
+        "z.ai"
+      ],
+      "github_orgs": [
+        "zai-org"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "minimax",
+      "ror": "https://ror.org/01ee25k38",
+      "names": [
+        "MiniMax"
+      ],
+      "acronyms": [],
+      "domains": [
+        "minimax.io",
+        "minimaxi.com"
+      ],
+      "github_orgs": [
+        "MiniMax-AI"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "stepfun",
+      "ror": "https://ror.org/03fwjkz17",
+      "names": [
+        "StepFun",
+        "阶跃星辰",
+        "StepFun AI",
+        "阶跃AI"
+      ],
+      "acronyms": [],
+      "domains": [
+        "stepfun.com"
+      ],
+      "github_orgs": [
+        "stepfun-ai"
+      ],
+      "parent": null,
+      "country": "CN"
+    },
+    {
+      "id": "baichuan",
+      "ror": "https://ror.org/05amsz404",
+      "names": [
+        "Baichuan Inc.",
+        "百川智能",
+        "Baichuan Intelligence",
+        "Baichuan",
+        "Baichuan AI",
+        "Beijing Baichuan Intelligent Technology Co., Ltd."
+      ],
+      "acronyms": [],
+      "domains": [
+        "baichuan-ai.com"
+      ],
+      "github_orgs": [
+        "baichuan-inc"
+      ],
+      "parent": null,
+      "country": "CN"
+    }
+  ]
+}

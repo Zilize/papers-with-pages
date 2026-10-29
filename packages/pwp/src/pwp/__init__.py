@@ -8,9 +8,17 @@ from pwp.events import EventCallbackError, EventHandler, ProgressEvent
 from pwp.extract import classify_link, extract_metadata_links, merge_links, normalize_url
 from pwp.github import inspect_repo
 from pwp.harvest import ArxivClient
+from pwp.institutions import (
+    Institution,
+    InstitutionIndex,
+    InstitutionMatch,
+    load_registry,
+    match_institutions,
+)
 from pwp.media import create_thumbnail, download_image
 from pwp.models import (
     Author,
+    AuthorBlock,
     Citation,
     DiscoveryLimits,
     DiscoveryResult,
@@ -19,6 +27,8 @@ from pwp.models import (
     Issue,
     LinkEvidence,
     MediaArtifact,
+    PageAffiliation,
+    PageAuthor,
     Paper,
     PaperLookup,
     PaperResult,
@@ -68,6 +78,14 @@ __all__ = [
     "select_main_video",
     "ArxivClient",
     "Author",
+    "AuthorBlock",
+    "Institution",
+    "InstitutionIndex",
+    "InstitutionMatch",
+    "load_registry",
+    "match_institutions",
+    "PageAffiliation",
+    "PageAuthor",
     "EventHandler",
     "HarvestBatch",
     "HarvestRecord",

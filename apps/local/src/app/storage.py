@@ -1,6 +1,7 @@
 """App-owned metadata, immutable attempts, and atomic display pointers."""
 
 import hashlib
+import io
 import json
 import os
 import threading
@@ -9,12 +10,19 @@ from datetime import UTC, datetime
 from pathlib import Path
 from uuid import uuid4
 
+from PIL import Image
 from pwp.extract.links import classify_link, project_page_exclusion
+from pwp.media import image_info
 from pwp.models import HarvestRecord, Paper, PaperResult
 
 from app.presentation import prepare
 
 _IO_LOCK = threading.RLock()
+# Bump when gallery entries change shape or presentation rules change.
+GALLERY_INDEX_VERSION = 1
+# Results are immutable per run, so these files identify a paper's gallery entry.
+_SIGNATURE_FILES = ("metadata.json", "current.json", "latest.json")
+THUMBNAIL_WIDTH = 640
 
 
 def _file_operation(operation):
@@ -64,6 +72,42 @@ def atomic_json(path: Path, value) -> None:
             _file_operation(lambda: os.replace(temporary, path))
     finally:
         temporary.unlink(missing_ok=True)
+
+
+def _signature(folder: Path) -> dict:
+    signature = {}
+    with os.scandir(folder) as entries:
+        for entry in entries:
+            if entry.name in _SIGNATURE_FILES:
+                stat = entry.stat()
+                signature[entry.name] = [stat.st_mtime_ns, stat.st_size]
+    return signature
+
+
+def thumbnail_path(source: Path) -> Path:
+    return source.with_name(f"{source.stem}.thumb.webp")
+
+
+def write_thumbnail(source: Path) -> Path:
+    """Write a gallery-sized WebP beside a content-addressed image once."""
+    target = thumbnail_path(source)
+    if target.exists():
+        return target
+    data = source.read_bytes()
+    image_info(data)
+    with Image.open(io.BytesIO(data)) as image:
+        image.thumbnail((THUMBNAIL_WIDTH, image.height))
+        output = io.BytesIO()
+        image.convert("RGB").save(output, format="WEBP", quality=80)
+    # Hash-named targets sit deep in assets; keep temporary names short for Windows MAX_PATH.
+    temporary = target.with_name(f".{uuid4().hex}.tmp")
+    try:
+        temporary.write_bytes(output.getvalue())
+        with _IO_LOCK:
+            _file_operation(lambda: os.replace(temporary, target))
+    finally:
+        temporary.unlink(missing_ok=True)
+    return target
 
 
 class Store:
@@ -193,43 +237,58 @@ class Store:
             ),
         }
 
+    def gallery_entry(self, key: str):
+        detail = self.detail(key)
+        if detail is None:
+            return {"saved": False, "item": None}
+        result = detail["result"]
+        resources = (
+            [r for r in result["resources"] if r["kind"] not in {"paper", "other"}]
+            if result
+            else []
+        )
+        if not resources:
+            return {"saved": True, "item": None}
+        return {
+            "saved": True,
+            "item": {
+                "key": detail["key"],
+                "paper": detail["paper"],
+                "resources": resources,
+                "cover": detail["cover"],
+                "thumbnail": detail["thumbnail"],
+                "videos": detail["videos"],
+                "problems": detail["problems"],
+                "warnings": detail["warnings"],
+                "quality": detail["quality"],
+                "stale": detail["stale"],
+                "status": result["status"],
+            },
+        }
+
     def gallery(self):
         # Users may clear the collection while the local server remains open.
         for name in ("papers", "assets", "runs"):
             (self.root / name).mkdir(parents=True, exist_ok=True)
-        items = []
-        saved = 0
+        index_path = self.root / "gallery-index.json"
+        index = read_json(index_path) or {}
+        cached = index.get("entries", {}) if index.get("version") == GALLERY_INDEX_VERSION else {}
+        entries = {}
         for folder in (self.root / "papers").iterdir():
             if not folder.is_dir():
                 continue
-            detail = self.detail(folder.name)
-            if detail is None:
-                continue
-            saved += 1
-            result = detail["result"]
-            resources = (
-                [r for r in result["resources"] if r["kind"] not in {"paper", "other"}]
-                if result
-                else []
-            )
-            if not resources:
-                continue
-            items.append(
-                {
-                    "key": detail["key"],
-                    "paper": detail["paper"],
-                    "resources": resources,
-                    "cover": detail["cover"],
-                    "videos": detail["videos"],
-                    "problems": detail["problems"],
-                    "warnings": detail["warnings"],
-                    "quality": detail["quality"],
-                    "stale": detail["stale"],
-                    "status": result["status"],
-                }
-            )
+            # Taken before reading, so a concurrent write always leaves a newer signature.
+            signature = _signature(folder)
+            previous = cached.get(folder.name)
+            if previous and previous["signature"] == signature:
+                entries[folder.name] = previous
+            else:
+                entries[folder.name] = {"signature": signature, **self.gallery_entry(folder.name)}
+        if entries != cached:
+            atomic_json(index_path, {"version": GALLERY_INDEX_VERSION, "entries": entries})
+        items = [entry["item"] for entry in entries.values() if entry["item"]]
         items.sort(key=lambda i: (str(i["paper"]["published_at"] or ""), i["key"]), reverse=True)
-        return {"items": items, "saved": saved}
+        return {"items": items, "saved": sum(entry["saved"] for entry in entries.values())}
 
     def save_run(self, state):
         atomic_json(self.root / "runs" / f"{state['id']}.json", state)

@@ -193,6 +193,38 @@ Page facts include title, description, resource links, raw and parsed BibTeX, an
 declared author/institution metadata. They remain page facts; a multi-paper page does not
 automatically confirm all resources for one paper.
 
+`ProjectPage.author_block` holds the author list and affiliations written near the title.
+Elements whose class or id names authors or affiliations are read first, otherwise the
+hero region after the `<h1>`. Superscript, plain-number, and letter markers link authors to
+affiliations; footnotes such as "work done at X" keep their text in `note`. Logos inside
+affiliation containers and schema.org JSON-LD people are reported with `source="logo"` and
+`source="json_ld"`. Names are kept as written. READMEs (`visuals=False`) have no author
+block.
+
+## Institutions
+
+```python
+from pwp import match_institutions
+
+for match in match_institutions(result):
+    print(match.institution_id, match.root_id, match.rule, match.source, match.text)
+```
+
+`match_institutions` maps a `PaperResult` to the bundled registry of well-known
+institutions (`pwp/registry`). It reads arXiv affiliations, `citation_author_institution`
+tags, page author blocks, page hosts (including `<org>.github.io`), and repository owners.
+Names are compared after Unicode, case, punctuation, and "The" normalization; Chinese,
+Japanese, and Korean names also match inside longer strings. Rules, from most to least
+specific, are `exact`, `segment` (one comma-separated part), `contains` (longest name
+inside a part), `leading_name` (single-word names such as "Meta" only where a name
+starts), and case-sensitive `acronym`; hosts and owners match by `domain` or `github_org`.
+One string may name several institutions. "University of <State>" followed by another
+campus, as in "University of Maryland, Baltimore County", does not match the flagship
+entry. `root_id` rolls labs up to their parent, and page matches carry `author_overlap`,
+the number of page-listed authors who are also paper authors. Unmatched names are simply
+absent; callers decide which sources and rules to trust. Pass an `InstitutionIndex` built
+from `load_registry(path)` to use another registry.
+
 `VisualCandidate` separates `image`/`video`/`unknown` media type from `direct`/`embed`
 delivery. It carries evidence, ranking reasons, known dimensions, posters, and confirmed
 alternative URLs. Video posters stay with videos; obvious logos, tiny images, and hidden
@@ -215,6 +247,9 @@ One browser visit supplies DOM extraction and a first-viewport PNG hero. Omit `w
 from `render_page` for DOM-only rendering. `RenderResult` contains the parsed page, HTML,
 optional screenshot, and issues. `capture_hero` also accepts a caller-owned Playwright
 page; the caller is responsible for how that page was loaded. There is no long screenshot.
+When a navigation deadline leaves the rendered DOM with under half of the static body
+text, as when a slow synchronous script stops the parser, page facts come from the static
+document and the issues include `rendered_dom_incomplete`; the screenshot is still taken.
 
 Files are validated, content-hashed, and atomically written inside the supplied directory.
 `MediaArtifact` includes dimensions, hash, timestamp, and capture parameters. Paths identify
